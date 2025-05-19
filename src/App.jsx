@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react';
 import {BrowserRouter as Router, Routes, Route, useLocation} from 'react-router-dom';
 
-import Home from './pages/Home';
-import PropertyDetail from './pages/PropertyDetail';
+import Home from './pages/home';
+import PropertyDetail from './pages/propertyDetail';
 import Header from "./components/global/header.jsx";
 import Footer from "./components/global/footer.jsx";
 
@@ -15,6 +15,7 @@ const App = () => {
         }, [pathname]);
         return null;
     }
+
     return (
         <Router>
             <ScrollToTop/>
