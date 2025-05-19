@@ -15,6 +15,7 @@ import {
     Switch
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import {useTranslation} from 'react-i18next';
 import logo from '../../assets/images/logo/IMG_9066 3.png';
 import phone from '../../assets/images/icon/proicons_call.png';
 import {useNavigate} from "react-router-dom";
@@ -23,12 +24,21 @@ export default function Header() {
     const [scrolled, setScrolled] = useState(false);
     const [drawerOpen, setDrawerOpen] = useState(false);
     const [language, setLanguage] = useState('english');
-
+    const {t, i18n} = useTranslation();
     const navigate = useNavigate();
     const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+    const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
 
-    const navItems = ['Gallery', 'About Us', 'Contact Us'];
+    const navItems = ['gallery', 'about_us', 'contact_us', 'commercial', 'residential'];
+
+    const navRoutes = {
+        gallery: '/gallery',
+        about_us: '/about',
+        contact_us: '/contact',
+        commercial: '/commercial',
+        residential: '/residential'
+    };
+
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -42,6 +52,8 @@ export default function Header() {
 
     const handleLanguageToggle = () => {
         setLanguage(prev => prev === 'english' ? 'gujarati' : 'english');
+        const newLang = i18n.language === 'english' ? 'gujarati' : 'english';
+        i18n.changeLanguage(newLang);
     };
 
     return (
@@ -50,11 +62,14 @@ export default function Header() {
                 position="fixed"
                 elevation={0}
                 sx={{
-                    backgroundColor: scrolled ? '#111' : 'transparent',
-                    transition: 'background-color 0.3s ease'
+                    backgroundColor: scrolled ? 'rgba(17, 17, 17, 0.5)' : 'transparent',
+                    backdropFilter: scrolled ? 'blur(10px)' : 'none',
+                    WebkitBackdropFilter: scrolled ? 'blur(10px)' : 'none',
+                    transition: 'background-color 0.3s ease, backdrop-filter 0.3s ease',
+                    boxShadow: scrolled ? '0 4px 20px rgba(0, 0, 0, 0.2)' : 'none',
                 }}
             >
-                <Container maxWidth="xl">
+            <Container maxWidth="xl">
                     <Toolbar
                         sx={{
                             justifyContent: 'space-between',
@@ -68,6 +83,7 @@ export default function Header() {
                             <Box sx={{display: 'flex', alignItems: 'center', gap: {md: 2, lg: 6}}}>
                                 {navItems.map((item) => (
                                     <Typography
+                                        onClick={() => navigate(navRoutes[item])}
                                         key={item}
                                         sx={{
                                             cursor: 'pointer',
@@ -77,13 +93,13 @@ export default function Header() {
                                             color: '#fff'
                                         }}
                                     >
-                                        {item}
+                                        {t(item)}
                                     </Typography>
                                 ))}
                             </Box>
                         )}
                         <Box sx={{display: 'flex', alignItems: 'center', gap: 2}}>
-                            <Box sx={{display: {xs: 'none', md: 'flex'}, alignItems: 'center', gap: 1, mr: 4}}>
+                            <Box sx={{display: {xs: 'none', lg: 'flex'}, alignItems: 'center', gap: 1, mr: 4}}>
                                 <Typography sx={{color: '#fff', fontSize: '20px'}}>Gujarati</Typography>
                                 <Switch
                                     checked={language === 'english'}
@@ -106,8 +122,8 @@ export default function Header() {
 
                             {isMobile && (
                                 <>
-                                    <IconButton edge="end" sx={{ color: '#fff' }} onClick={toggleDrawer(true)}>
-                                        <MenuIcon />
+                                    <IconButton edge="end" sx={{color: '#fff'}} onClick={toggleDrawer(true)}>
+                                        <MenuIcon/>
                                     </IconButton>
                                     <Drawer
                                         anchor="left"
@@ -139,24 +155,30 @@ export default function Header() {
                                         </IconButton>
 
                                         <Box
-                                            sx={{ width: '100%', pt: 6 }}
+                                            sx={{width: '100%', pt: 6}}
                                             role="presentation"
                                             onClick={toggleDrawer(false)}
                                             onKeyDown={toggleDrawer(false)}
                                         >
                                             <List>
                                                 {navItems.map((text) => (
-                                                    <ListItem button key={text}>
+                                                    <ListItem button key={text} onClick={() => navigate(navRoutes[text])}>
                                                         <ListItemText
                                                             primary={text}
-                                                            primaryTypographyProps={{ sx: { color: '#fff' } }}
+                                                            primaryTypographyProps={{sx: {color: '#fff'}}}
                                                         />
                                                     </ListItem>
                                                 ))}
                                             </List>
                                         </Box>
-                                        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 1, mb: 4 }}>
-                                            <Typography sx={{ color: '#fff', fontSize: '20px' }}>Gujarati</Typography>
+                                        <Box sx={{
+                                            display: 'flex',
+                                            justifyContent: 'center',
+                                            alignItems: 'center',
+                                            gap: 1,
+                                            mb: 4
+                                        }}>
+                                            <Typography sx={{color: '#fff', fontSize: '20px'}}>Gujarati</Typography>
                                             <Switch
                                                 checked={language === 'english'}
                                                 onChange={handleLanguageToggle}
@@ -170,7 +192,7 @@ export default function Header() {
                                                     },
                                                 }}
                                             />
-                                            <Typography sx={{ color: '#fff', fontSize: '20px' }}>English</Typography>
+                                            <Typography sx={{color: '#fff', fontSize: '20px'}}>English</Typography>
                                         </Box>
                                     </Drawer>
                                 </>

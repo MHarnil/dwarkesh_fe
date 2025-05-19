@@ -79,9 +79,21 @@ import sliderSix4 from '../assets/images/side3/slider/IMG-20250508-WA0061.jpg';
 import sliderSix5 from '../assets/images/side3/slider/IMG-20250508-WA0063.jpg';
 import sliderSix6 from '../assets/images/side3/slider/IMG-20250508-WA0064.jpg';
 
+import heroSeven from '../assets/images/side7/06 1.png';
+import homes from '../assets/images/side7/01 1.png';
+import sideSeven1 from '../assets/images/side5/VAV 635 SP-1 BOOKING PLAN-1 1.png';
+import sideSeven2 from '../assets/images/side5/VAV 635 SP-1 BOOKING PLAN-2 1.png';
+import sideSeven3 from '../assets/images/side5/VAV 635 SP-1 BOOKING PLAN-3 1.png';
+import sliderSeven1 from '../assets/images/side7/slider/02 2.png';
+import sliderSeven2 from '../assets/images/side7/slider/04 1.png';
+import sliderSeven3 from '../assets/images/side7/slider/06 2.png';
+import sliderSeven4 from '../assets/images/side7/slider/08 1.png';
+import sliderSeven5 from '../assets/images/side7/slider/07 1.png';
+
 const propertyFloorPlans = [
     {
         id: 1,
+        propertyType: 'Residential',
         heroImg: heroOne,
         title: 'KARUNESH LUXURIA',
         subTitle: 'A LUXURIES FLATS',
@@ -96,16 +108,19 @@ const propertyFloorPlans = [
             {title: '1 to 14 Floor Plan', img: sideOne3}
         ],
         sliderImages: [sliderOne1, sliderOne2, sliderOne3, sliderOne4, sliderOne5, sliderOne6, sliderOne7, sliderOne8, sliderOne9],
-        mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d929.860984618169!2d72.88394812151536!3d21.214237580554737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f0006579271%3A0xdc2416181161d605!2sKarunesh%20Business%20Center%20KBC!5e0!3m2!1sen!2sin!4v1747035262178!5m2!1sen!2sin'
+        mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d929.860984618169!2d72.88394812151536!3d21.214237580554737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f0006579271%3A0xdc2416181161d605!2sKarunesh%20Business%20Center%20KBC!5e0!3m2!1sen!2sin!4v1747035262178!5m2!1sen!2sin',
+        phoneNo: '96018 15727',
+        address: '6XW2+RJ, Pasodara, Surat, Gujarat 394326'
     },
     {
         id: 2,
+        propertyType: 'Commercial',
         heroImg: heroTwo,
         title: 'KARUNESH BUSINESS CENTER - 2',
         subTitle: 'COMMARCIAL AND BUSINESS',
         stateLocation: 'Gujarat - Surat',
-        name: 'KARUNESH TOWER',
-        location: 'City Center',
+        name: 'KBC - 1',
+        location: 'Commercial and business',
         categories: ['ALL', '3 BHK', '4 BHK'],
         image: towerImage,
         floorPlans: [
@@ -114,16 +129,19 @@ const propertyFloorPlans = [
             {title: 'Second Floor Plan', img: sideTwo3}
         ],
         sliderImages: [sliderTwo1, sliderTwo2, sliderTwo3, sliderTwo4, sliderTwo5, sliderTwo6, sliderTwo7, sliderTwo8, sliderTwo9, sliderTwo10],
-        mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d929.860984618169!2d72.88394812151536!3d21.214237580554737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f0006579271%3A0xdc2416181161d605!2sKarunesh%20Business%20Center%20KBC!5e0!3m2!1sen!2sin!4v1747035262178!5m2!1sen!2sin'
+        mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d929.860984618169!2d72.88394812151536!3d21.214237580554737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f0006579271%3A0xdc2416181161d605!2sKarunesh%20Business%20Center%20KBC!5e0!3m2!1sen!2sin!4v1747035262178!5m2!1sen!2sin',
+        phoneNo: '96018 15727',
+        address: 'Behind Nilkanth Plaza, Kiran Chowk, Yogichowk Road, Surat.'
     },
     {
         id: 3,
+        propertyType: 'Commercial',
         heroImg: heroThree,
         title: 'KARUNESH BUSINESS CENTER - 3',
         subTitle: 'COMMARCIAL AND BUSINESS',
         stateLocation: 'Gujarat - Surat',
-        name: 'KARUNESH VILLA',
-        location: 'Suburb Area',
+        name: 'KBC - 2',
+        location: 'Commercial and business',
         categories: ['ALL', '4 BHK'],
         image: buildingImage,
         floorPlans: [
@@ -132,16 +150,19 @@ const propertyFloorPlans = [
             {title: 'Second Floor Plan', img: sideThree3}
         ],
         sliderImages: [sliderThree1, sliderThree2, sliderThree3, sliderThree4, sliderThree5, sliderThree6],
-        mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3127.6353384303993!2d72.88490243183226!3d21.215735301215002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f0006579271%3A0xdc2416181161d605!2sKarunesh%20Business%20Center%20KBC!5e0!3m2!1sen!2sin!4v1747125967666!5m2!1sen!2sin'
+        mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3127.6353384303993!2d72.88490243183226!3d21.215735301215002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f0006579271%3A0xdc2416181161d605!2sKarunesh%20Business%20Center%20KBC!5e0!3m2!1sen!2sin!4v1747125967666!5m2!1sen!2sin',
+        phoneNo: '87695 93034',
+        address: 'Beside Saundarya Heights, Nr. Savaliya Circle, Yogi Chowk Road, Surat.'
     },
     {
         id: 4,
+        propertyType: 'Commercial',
         heroImg: heroFour,
         title: 'KARUNESH BUSINESS CENTER',
         subTitle: 'COMMARCIAL AND BUSINESS',
         stateLocation: 'Gujarat - Surat',
-        name: 'KBC3',
-        location: 'Business District',
+        name: 'KBC - 3',
+        location: 'Commercial and business',
         categories: ['ALL', 'Office'],
         image: kbc3Image,
         floorPlans: [
@@ -150,16 +171,19 @@ const propertyFloorPlans = [
             {title: 'Third and Fourth Floor Plan', img: sideFour3}
         ],
         sliderImages: [sliderFour1, sliderFour2, sliderFour3, sliderFour4, sliderFour5, sliderFour6],
-        mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d929.860984618169!2d72.88394812151536!3d21.214237580554737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f0006579271%3A0xdc2416181161d605!2sKarunesh%20Business%20Center%20KBC!5e0!3m2!1sen!2sin!4v1747035262178!5m2!1sen!2sin'
+        mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d929.860984618169!2d72.88394812151536!3d21.214237580554737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f0006579271%3A0xdc2416181161d605!2sKarunesh%20Business%20Center%20KBC!5e0!3m2!1sen!2sin!4v1747035262178!5m2!1sen!2sin',
+        phoneNo: '87695 93034',
+        address: 'Opposite Abhisheck Arcade, Yogichowk Road, surat.'
     },
     {
         id: 5,
+        propertyType: 'Residential',
         heroImg: heroFive,
         title: 'KARUNESH TOWER',
         subTitle: 'COMMARCIAL AND BUSINESS',
         stateLocation: 'Gujarat - Surat',
-        name: 'KARUNESH TWIN TOWERS',
-        location: 'City Center',
+        name: 'KARUNESH TOWER',
+        location: '5 & 6 BHK Ultra Luxury apartments & Penthouses',
         categories: ['ALL', '2 BHK', '3 BHK'],
         image: twinTowersImage,
         floorPlans: [
@@ -168,15 +192,18 @@ const propertyFloorPlans = [
             {title: 'Typical Floor Plan', img: sideFive3}
         ],
         sliderImages: [sliderFive1, sliderFive2, sliderFive3, sliderFive4, sliderFive5, sliderFive6, sliderFive7, sliderFive8],
-        mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d929.860984618169!2d72.88394812151536!3d21.214237580554737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f0006579271%3A0xdc2416181161d605!2sKarunesh%20Business%20Center%20KBC!5e0!3m2!1sen!2sin!4v1747035262178!5m2!1sen!2sin'
+        mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d929.860984618169!2d72.88394812151536!3d21.214237580554737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f0006579271%3A0xdc2416181161d605!2sKarunesh%20Business%20Center%20KBC!5e0!3m2!1sen!2sin!4v1747035262178!5m2!1sen!2sin',
+        phoneNo: '87695 93034',
+        address: 'Opposite Abhisheck Arcade, Yogichowk Road, surat.'
     },
     {
         id: 6,
+        propertyType: 'Residential',
         heroImg: heroSix,
         title: 'RESIDENTIAL PLOT',
         stateLocation: 'Gujarat - Surat',
-        name: 'ICON VILLA',
-        location: 'City Center',
+        name: 'PLOT',
+        location: 'Commercial and business',
         categories: ['ALL', '3 BHK'],
         image: iconVilla,
         floorPlans: [
@@ -185,7 +212,30 @@ const propertyFloorPlans = [
             {title: 'Karunesh Texpa Plan', img: sideSix3}
         ],
         sliderImages: [sliderSix1, sliderSix2, sliderSix3, sliderSix4, sliderSix5, sliderSix6],
-        mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d929.860984618169!2d72.88394812151536!3d21.214237580554737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f0006579271%3A0xdc2416181161d605!2sKarunesh%20Business%20Center%20KBC!5e0!3m2!1sen!2sin!4v1747035262178!5m2!1sen!2sin'
+        mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d929.860984618169!2d72.88394812151536!3d21.214237580554737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f0006579271%3A0xdc2416181161d605!2sKarunesh%20Business%20Center%20KBC!5e0!3m2!1sen!2sin!4v1747035262178!5m2!1sen!2sin',
+        phoneNo: '87695 93034',
+        address: 'New Iconic Road jakatnak, Surat.'
+    },
+    {
+        id: 7,
+        propertyType: 'Residential',
+        heroImg: heroSeven,
+        title: 'KARUNESH HOMES',
+        subTitle: 'COMMARCIAL AND BUSINESS',
+        stateLocation: 'Gujarat - Surat',
+        name: 'KARUNESH HOMES',
+        location: 'Commercial and business',
+        categories: ['ALL', '3 BHK'],
+        image: homes,
+        floorPlans: [
+            {title: 'Ground Floor Plan', img: sideSeven1},
+            {title: 'First Floor Plan', img: sideSeven2},
+            {title: 'Typical Floor Plan', img: sideSeven3}
+        ],
+        sliderImages: [sliderSeven1, sliderSeven2, sliderSeven3, sliderSeven4, sliderSeven5],
+        mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d929.860984618169!2d72.88394812151536!3d21.214237580554737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f0006579271%3A0xdc2416181161d605!2sKarunesh%20Business%20Center%20KBC!5e0!3m2!1sen!2sin!4v1747035262178!5m2!1sen!2sin',
+        phoneNo: '87695 93034',
+        address: 'Opposite Abhisheck Arcade, Yogichowk Road, surat.'
     }
 ];
 

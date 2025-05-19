@@ -28,11 +28,11 @@ const InterestSection = () => {
                         Provide your details below to submit your interest.
                     </Typography>
 
-                    <FormControl fullWidth sx={{mb: 2, backgroundColor: '#FFF', height: '50px'}}>
+                    <FormControl fullWidth sx={{mb: 2, backgroundColor: '#FFF', height: '45px'}}>
                         <OutlinedInput
                             placeholder="Project Interested For – Dwarkesh"
                             sx={{
-                                height: '50px',
+                                height: '45px',
                                 border: 'none',
                                 borderRadius: '0px',
                                 '& fieldset': {
@@ -43,11 +43,11 @@ const InterestSection = () => {
                     </FormControl>
 
                     <Box sx={{display: 'flex', gap: 2, flexDirection: {xs: 'column', sm: 'row'}}}>
-                        <FormControl fullWidth sx={{mb: 2, backgroundColor: '#FFF', height: '50px'}}>
+                        <FormControl fullWidth sx={{mb: 2, backgroundColor: '#FFF', height: '45px'}}>
                             <OutlinedInput
                                 placeholder="First Name *"
                                 sx={{
-                                    height: '50px',
+                                    height: '45px',
                                     border: 'none',
                                     borderRadius: '0px',
                                     '& fieldset': {
@@ -56,11 +56,11 @@ const InterestSection = () => {
                                 }}
                             />
                         </FormControl>
-                        <FormControl fullWidth sx={{mb: 2, backgroundColor: '#FFF', height: '50px'}}>
+                        <FormControl fullWidth sx={{mb: 2, backgroundColor: '#FFF', height: '45px'}}>
                             <OutlinedInput
                                 placeholder="Last Name *"
                                 sx={{
-                                    height: '50px',
+                                    height: '45px',
                                     border: 'none',
                                     borderRadius: '0px',
                                     '& fieldset': {
@@ -72,11 +72,11 @@ const InterestSection = () => {
                     </Box>
 
                     <Box sx={{display: 'flex', gap: 2, flexDirection: {xs: 'column', sm: 'row'}}}>
-                        <FormControl fullWidth sx={{mb: 2, backgroundColor: '#FFF', height: '50px'}}>
+                        <FormControl fullWidth sx={{mb: 2, backgroundColor: '#FFF', height: '45px'}}>
                             <OutlinedInput
                                 placeholder="Contact No *"
                                 sx={{
-                                    height: '50px',
+                                    height: '45px',
                                     border: 'none',
                                     borderRadius: '0px',
                                     '& fieldset': {
@@ -85,11 +85,11 @@ const InterestSection = () => {
                                 }}
                             />
                         </FormControl>
-                        <FormControl fullWidth sx={{mb: 2, backgroundColor: '#FFF', height: '50px'}}>
+                        <FormControl fullWidth sx={{mb: 2, backgroundColor: '#FFF', height: '45px'}}>
                             <OutlinedInput
                                 placeholder="Email ID *"
                                 sx={{
-                                    height: '50px',
+                                    height: '45px',
                                     border: 'none',
                                     borderRadius: '0px',
                                     '& fieldset': {
@@ -163,13 +163,13 @@ const InterestSection = () => {
 
                     <Box display="flex" alignItems="center" pb={2} my={2} sx={{borderBottom: '2px solid #CA730680'}}>
                         <PhoneIcon sx={{color: '#CA7306', mr: 1, fontSize: '28px'}}/>
-                        <Typography>+91 96018 15727</Typography>
+                        <Typography>+91 {property.phoneNo}</Typography>
                     </Box>
 
                     <Box display="flex" alignItems="center" pb={2} my={2} sx={{borderBottom: '2px solid #CA730680'}}>
                         <RoomIcon sx={{color: '#CA7306', mr: 1, fontSize: '28px'}}/>
                         <Typography>
-                            6XW2+RJ, Pasodara, Surat, Gujarat 394236
+                            {property.address}
                         </Typography>
                     </Box>
                 </Grid>

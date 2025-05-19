@@ -131,7 +131,7 @@ const StatsSection = () => {
                                 slidesPerView: 1,
                                 spaceBetween: 10,
                             },
-                            '@0.75': {
+                            '@0.80': {
                                 slidesPerView: 2,
                                 spaceBetween: 20,
                             }

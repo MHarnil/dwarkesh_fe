@@ -5,6 +5,8 @@ import Home from './pages/home';
 import PropertyDetail from './pages/propertyDetail';
 import Header from "./components/global/header.jsx";
 import Footer from "./components/global/footer.jsx";
+import AboutPage from "./pages/aboutPage.jsx";
+import ContactUs from "./pages/contactUs.jsx";
 
 const App = () => {
 
@@ -23,6 +25,8 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/property/:id" element={<PropertyDetail/>}/>
+                <Route path="/about" element={<AboutPage/>}/>
+                <Route path="/contact" element={<ContactUs/>}/>
             </Routes>
             <Footer/>
         </Router>

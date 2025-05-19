@@ -84,7 +84,7 @@ const PropertyGallery = () => {
                 <Grid container spacing={2}>
                     {filteredProperties?.map((property) => (
                         <Grid item size={{xs: 6, md: 4, lg: 3}} key={property.id}>
-                            <Card
+                            <Card onClick={() => navigate(`/property/${property.id}`)}
                                 sx={{
                                     borderRadius: '0',
                                     cursor: 'pointer',
@@ -150,21 +150,22 @@ const PropertyGallery = () => {
 
                                         <Box sx={{display: 'flex', justifyContent: 'start', gap: 1, my: 2}}>
                                             <IconButton
-                                                onClick={() => {
+                                                onClick={(e) => {
+                                                    e.stopPropagation(); // prevents click from bubbling to Card
                                                     setSelectedImage(property.image);
                                                     setOpenDialog(true);
                                                 }}
                                                 sx={{
                                                     backgroundColor: '#fff',
-                                                    '&:hover': {backgroundColor: '#EFBA1D'},
-                                                    width: {xs: 18, sm: 45},
-                                                    height: {xs: 18, sm: 45},
+                                                    '&:hover': { backgroundColor: '#EFBA1D' },
+                                                    width: { xs: 18, sm: 45 },
+                                                    height: { xs: 18, sm: 45 },
                                                     borderRadius: '5px',
                                                     color: '#000',
-                                                    p: {xs: 2, sm: 0}
+                                                    p: { xs: 2, sm: 0 }
                                                 }}
                                             >
-                                                <ZoomOutMap/>
+                                                <ZoomOutMap />
                                             </IconButton>
                                             <IconButton
                                                 sx={{

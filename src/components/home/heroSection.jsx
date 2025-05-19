@@ -21,14 +21,13 @@ export default function HeroSection() {
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    backgroundImage: `linear-gradient(to bottom, rgb(143 143 143 / 60%), rgb(22 22 22 / 60%)), url(${heroBg})`,
+                    backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${heroBg})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
                     zIndex: 1,
                 }}
             />
-
             <Box
                 sx={{
                     position: 'relative',

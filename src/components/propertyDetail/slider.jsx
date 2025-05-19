@@ -237,7 +237,7 @@ const ProjectGallerySlider = () => {
     const theme = useTheme();
     const isXs = useMediaQuery(theme.breakpoints.down('sm'));
     const isSm = useMediaQuery(theme.breakpoints.between('sm', 'md'));
-
+    const [activeIndex, setActiveIndex] = useState(0);
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
     const [swiperRef, setSwiperRef] = useState(null);
 
@@ -285,6 +285,7 @@ const ProjectGallerySlider = () => {
                 <Box position="relative" mb={2}>
                     <Swiper
                         onSwiper={setSwiperRef}
+                        onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
                         modules={[Thumbs, Navigation, Autoplay]}
                         thumbs={{ swiper: thumbsSwiper }}
                         autoplay={{ delay: 2000 }}
@@ -366,7 +367,7 @@ const ProjectGallerySlider = () => {
                             <Box
                                 sx={{
                                     width: `${THUMBNAIL_SIZE}px`,
-                                    height: { xs: '70px', sm: '86px', md: '110px' },
+                                    height: { xs: '70px', sm: '86px', md: '90px' },
                                     cursor: 'pointer',
                                     overflow: 'hidden',
                                     position: 'relative',
@@ -380,12 +381,26 @@ const ProjectGallerySlider = () => {
                                             width: '100%',
                                             height: '100%',
                                             objectFit: 'cover',
+                                            opacity: activeIndex === index ? 1 : 0.8,
                                         }}
                                     />
+                                    {activeIndex !== index && (
+                                        <Box
+                                            sx={{
+                                                position: 'absolute',
+                                                top: 0,
+                                                left: 0,
+                                                width: '100%',
+                                                height: '100%',
+                                                backgroundColor: 'rgba(255,255,255,0.4)',
+                                            }}
+                                        />
+                                    )}
                                 </ImageListItem>
                             </Box>
                         </SwiperSlide>
                     ))}
+
                 </Swiper>
             </Box>
         </Box>
