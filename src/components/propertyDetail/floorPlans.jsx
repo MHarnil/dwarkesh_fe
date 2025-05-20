@@ -8,10 +8,12 @@ import {
 } from '@mui/material';
 import propertyFloorPlans from '../propertyFloorPlans.js';
 import { useParams } from "react-router-dom";
+import {useTranslation} from "react-i18next";
 
 const FloorPlansSection = () => {
     const { id } = useParams();
     const floorData = propertyFloorPlans.find(plan => plan.id === Number(id));
+    const { t } = useTranslation();
 
     const [open, setOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
@@ -46,7 +48,7 @@ const FloorPlansSection = () => {
                         fontWeight: '700',
                     }}
                 >
-                    Floor Plans
+                    {t('floorPlans.title')}
                 </Typography>
 
                 <Grid container spacing={3} justifyContent="center">

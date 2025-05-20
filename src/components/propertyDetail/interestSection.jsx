@@ -35,11 +35,17 @@ const InterestSection = () => {
                                 height: '45px',
                                 border: 'none',
                                 borderRadius: '0px',
+                                color: '#CA7306',
                                 '& fieldset': {
                                     border: 'none',
                                 },
+                                '& input::placeholder': {
+                                    color: '#CA7306',
+                                    opacity: 1,
+                                },
                             }}
                         />
+
                     </FormControl>
 
                     <Box sx={{display: 'flex', gap: 2, flexDirection: {xs: 'column', sm: 'row'}}}>

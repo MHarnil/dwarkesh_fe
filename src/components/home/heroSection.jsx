@@ -1,9 +1,10 @@
 import React from 'react';
-import { Box, Typography, useTheme, useMediaQuery } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import heroBg from '../../assets/images/home/IMG-20250508-WA0022 1.png';
+import {useTranslation} from "react-i18next";
 
 export default function HeroSection() {
-    const theme = useTheme();
+    const { t } = useTranslation();
 
     return (
         <Box
@@ -55,7 +56,7 @@ export default function HeroSection() {
                         lineHeight: 1.2,
                     }}
                 >
-                    Building Real Estate Eco System
+                    {t('hero_title')}
                 </Typography>
             </Box>
         </Box>

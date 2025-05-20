@@ -99,23 +99,65 @@ export default function Header() {
                             </Box>
                         )}
                         <Box sx={{display: 'flex', alignItems: 'center', gap: 2}}>
-                            <Box sx={{display: {xs: 'none', lg: 'flex'}, alignItems: 'center', gap: 1, mr: 4}}>
-                                <Typography sx={{color: '#fff', fontSize: '20px'}}>Gujarati</Typography>
+                            <Box
+                                sx={{
+                                    display: { xs: 'none', lg: 'flex' },
+                                    alignItems: 'center',
+                                    gap: 1,
+                                    mr: 4,
+                                }}
+                            >
+                                <Typography
+                                    sx={{
+                                        color: '#fff',
+                                        fontSize: '16px',
+                                    }}
+                                >
+                                    {t('gujarati')}
+                                </Typography>
+
                                 <Switch
-                                    checked={language === 'english'}
+                                    checked={language === 'gujarati'}
                                     onChange={handleLanguageToggle}
                                     color="default"
                                     sx={{
+                                        width: 50,
+                                        height: 28,
+                                        padding: 0,
+                                        '& .MuiSwitch-switchBase': {
+                                            padding: '2px',
+                                            '&.Mui-checked': {
+                                                transform: 'translateX(22px)',
+                                                color: '#000',
+                                                '& + .MuiSwitch-track': {
+                                                    backgroundColor: '#fff',
+                                                },
+                                            },
+                                        },
                                         '& .MuiSwitch-thumb': {
+                                            width: 24,
+                                            height: 24,
                                             backgroundColor: '#000',
+                                            boxShadow: 'none',
                                         },
                                         '& .MuiSwitch-track': {
+                                            borderRadius: 28 / 2,
                                             backgroundColor: '#fff',
+                                            opacity: 1,
                                         },
                                     }}
                                 />
-                                <Typography sx={{color: '#fff', fontSize: '20px'}}>English</Typography>
+
+                                <Typography
+                                    sx={{
+                                        color: '#fff',
+                                        fontSize: '16px',
+                                    }}
+                                >
+                                   {t('english')}
+                                </Typography>
                             </Box>
+
                             <Box sx={{width: '35px', height: '35px'}}>
                                 <Box component="img" src={phone} sx={{width: '100%', height: '100%'}}/>
                             </Box>

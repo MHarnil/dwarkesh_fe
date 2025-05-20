@@ -1,8 +1,10 @@
 import React from 'react';
-import { Box, Typography, useTheme, useMediaQuery, Container } from '@mui/material';
+import { Box, Typography,  Container } from '@mui/material';
+import {useTranslation} from "react-i18next";
 
 export default function AboutSection() {
-    const theme = useTheme();
+
+    const { t } = useTranslation();
 
     return (
         <Box sx={{ py: { xs: 6, sm: 8, md: 15 }, backgroundColor: '#fff' }}>
@@ -19,7 +21,7 @@ export default function AboutSection() {
                         color: '#1B1B1B'
                     }}
                 >
-                    About Dwarkesh
+                    {t('about_dwarkesh_title')}
                 </Typography>
 
                 <Typography
@@ -34,11 +36,7 @@ export default function AboutSection() {
                         px: { xs: 2, sm: 4, md: 6 }
                     }}
                 >
-                    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                    type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                    popularised in the 1960s with the release of Letraset sheets containing
+                    {t('about_dwarkesh_description')}
                 </Typography>
             </Container>
         </Box>

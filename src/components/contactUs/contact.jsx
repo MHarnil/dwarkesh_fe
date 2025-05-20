@@ -10,8 +10,10 @@ import {
 } from '@mui/material';
 import PhoneIcon from '@mui/icons-material/Phone';
 import RoomIcon from '@mui/icons-material/Room';
+import {useTranslation} from "react-i18next";
 
 const Contact = () => {
+    const { t } = useTranslation();
     return (
         <Container maxWidth="lg" sx={{py: 10}}>
             <Grid container spacing={3} alignItems="start" justifyContent="center">
@@ -19,15 +21,15 @@ const Contact = () => {
                       sx={{backgroundColor: '#EBEBEB', p: 5, width: {xs: '100%', md: '48%'}}}>
                     <Typography variant="h5" fontWeight="bold" gutterBottom
                                 sx={{fontSize: {xs: '28px', md: '38px'}, fontWeight: '700'}}>
-                        Show Your Interest
+                        {t('contact.contact.form.title')}
                     </Typography>
                     <Typography sx={{color: '#CA7306', mb: 2, fontSize: '15px', fontWeight: '700'}}>
-                        Provide your details below to submit your interest.
+                        {t('contact.contact.form.subtitle')}
                     </Typography>
 
                     <FormControl fullWidth sx={{mb: 2, backgroundColor: '#FFF', height: '45px'}}>
                         <OutlinedInput
-                            placeholder="Project Interested For – Dwarkesh"
+                            placeholder={t('contact.contact.form.placeholders.project')}
                             sx={{
                                 height: '45px',
                                 border: 'none',
@@ -42,7 +44,7 @@ const Contact = () => {
                     <Box sx={{display: 'flex', gap: 2, flexDirection: {xs: 'column', sm: 'row'}}}>
                         <FormControl fullWidth sx={{mb: 2, backgroundColor: '#FFF', height: '45px'}}>
                             <OutlinedInput
-                                placeholder="First Name *"
+                                placeholder={t('contact.contact.form.placeholders.firstName')}
                                 sx={{
                                     height: '45px',
                                     border: 'none',
@@ -55,7 +57,7 @@ const Contact = () => {
                         </FormControl>
                         <FormControl fullWidth sx={{mb: 2, backgroundColor: '#FFF', height: '45px'}}>
                             <OutlinedInput
-                                placeholder="Last Name *"
+                                placeholder={t('contact.contact.form.placeholders.lastName')}
                                 sx={{
                                     height: '45px',
                                     border: 'none',
@@ -71,7 +73,7 @@ const Contact = () => {
                     <Box sx={{display: 'flex', gap: 2, flexDirection: {xs: 'column', sm: 'row'}}}>
                         <FormControl fullWidth sx={{mb: 2, backgroundColor: '#FFF', height: '45px'}}>
                             <OutlinedInput
-                                placeholder="Contact No *"
+                                placeholder={t('contact.contact.form.placeholders.contactNo')}
                                 sx={{
                                     height: '45px',
                                     border: 'none',
@@ -84,7 +86,7 @@ const Contact = () => {
                         </FormControl>
                         <FormControl fullWidth sx={{mb: 2, backgroundColor: '#FFF', height: '45px'}}>
                             <OutlinedInput
-                                placeholder="Email ID *"
+                                placeholder={t('contact.contact.form.placeholders.email')}
                                 sx={{
                                     height: '45px',
                                     border: 'none',
@@ -99,7 +101,7 @@ const Contact = () => {
 
                     <FormControl fullWidth sx={{mb: 2, backgroundColor: '#FFF'}}>
                         <OutlinedInput
-                            placeholder="Your Message *"
+                            placeholder={t('contact.contact.form.placeholders.message')}
                             multiline
                             rows={4}
                             sx={{
@@ -131,7 +133,7 @@ const Contact = () => {
                             },
                         }}
                     >
-                        Submit Interest
+                        {t('contact.contact.form.submit')}
                     </Button>
                 </Grid>
 
@@ -157,13 +159,13 @@ const Contact = () => {
                     </Box>
                     <Box display="flex" alignItems="center" pb={2} my={2} sx={{borderBottom: '2px solid #CA730680'}}>
                         <PhoneIcon sx={{color: '#CA7306', mr: 1, fontSize: '28px'}}/>
-                        <Typography>+91 87695 93034</Typography>
+                        <Typography>{t('contact.contact.info.phone')}</Typography>
                     </Box>
 
                     <Box display="flex" alignItems="center" pb={2} my={2} sx={{borderBottom: '2px solid #CA730680'}}>
                         <RoomIcon sx={{color: '#CA7306', mr: 1, fontSize: '28px'}}/>
                         <Typography>
-                            New Iconic Road jakatnak, Surat.
+                            {t('contact.contact.info.address')}
                         </Typography>
                     </Box>
                 </Grid>

@@ -1,8 +1,10 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import bgimg from '../../assets/images/about/IMG-20250508-WA0051 3.png';
+import {useTranslation} from "react-i18next";
 
 const ContactHero = () => {
+    const { t } = useTranslation();
     return (
         <Box
             sx={{
@@ -21,10 +23,10 @@ const ContactHero = () => {
             }}
         >
             <Typography variant="h2" component="h1" fontWeight="bold">
-                CONTACT US
+                {t('contact.hero.title')}
             </Typography>
             <Typography variant="h6" mt={22} sx={{fontSize:'30px', fontWeight: '700'}}>
-                Gujarat – Surat
+                {t('contact.hero.location')}
             </Typography>
         </Box>
     )

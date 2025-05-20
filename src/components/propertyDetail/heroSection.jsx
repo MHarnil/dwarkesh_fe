@@ -3,6 +3,7 @@ import {Box, Typography, keyframes} from '@mui/material';
 import down from '../../assets/images/icon/ic_twotone-double-arrow.png';
 import propertyFloorPlans from "../propertyFloorPlans.js";
 import {useParams} from "react-router-dom";
+import {useTranslation} from "react-i18next";
 
 const bounce = keyframes`
     0%, 100% {
@@ -16,6 +17,8 @@ const bounce = keyframes`
 const HeroSection = () => {
     const {id} = useParams();
     const targetRef = useRef(null);
+
+    const { t, i18n } = useTranslation();
 
     const property = propertyFloorPlans.find(property => property.id === parseInt(id));
 
@@ -111,7 +114,7 @@ const HeroSection = () => {
                     },
                 }}
             >
-                On-Going Project
+                {t('heroSection.ongoingProject')}
             </Typography>
 
             <Typography
@@ -127,7 +130,7 @@ const HeroSection = () => {
                     },
                 }}
             >
-                Scroll To Discover
+                {t('heroSection.scrollToDiscover')}
             </Typography>
 
             <Box mt={1} onClick={scrollToTarget} ref={targetRef}>

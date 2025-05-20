@@ -1,8 +1,9 @@
 import React from 'react';
-import {Box, Container, Typography, useTheme} from '@mui/material';
+import {Box, Container, Typography} from '@mui/material';
+import {useTranslation} from "react-i18next";
 
 const VisionMissionSection = () => {
-    const theme = useTheme();
+    const { t } = useTranslation();
 
     return (
         <Box py={{xs: 6, md: 10}} bgcolor="#fff">
@@ -21,7 +22,7 @@ const VisionMissionSection = () => {
                             color: '#1B1B1B'
                         }}
                     >
-                        Our Vision
+                        {t('about.visionMission.vision.title')}
                     </Typography>
                     <Typography variant="body1"
                                 align="center"
@@ -33,10 +34,7 @@ const VisionMissionSection = () => {
                                     mt: 3,
                                     px: {xs: 2, sm: 4, md: 6}
                                 }}>
-                        is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                        type and scrambled it to make a type specimen book. It has survived not only five centuries, but
-                        also the leap into electronic typesetting, remaining essentially unchanged.
+                        {t('about.visionMission.vision.description')}
                     </Typography>
                 </Box>
 
@@ -54,7 +52,7 @@ const VisionMissionSection = () => {
                             color: '#1B1B1B'
                         }}
                     >
-                        Our Mission
+                        {t('about.visionMission.mission.title')}
                     </Typography>
                     <Typography variant="body1"
                                 align="center"
@@ -66,10 +64,7 @@ const VisionMissionSection = () => {
                                     mt: 3,
                                     px: {xs: 2, sm: 4, md: 6}
                                 }}>
-                        is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                        type and scrambled it to make a type specimen book. It has survived not only five centuries, but
-                        also the leap into electronic typesetting, remaining essentially unchanged.
+                        {t('about.visionMission.mission.description')}
                     </Typography>
                 </Box>
             </Container>

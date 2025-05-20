@@ -1,8 +1,10 @@
 import React from 'react';
 import { Box, Typography, Button, Container } from '@mui/material';
 import bgImage from '../../assets/images/home/IMG-20250508-WA0074.jpg';
+import {useTranslation} from "react-i18next";
 
 const Nurturing = () => {
+    const { t } = useTranslation();
     return (
         <Box
             sx={{
@@ -30,7 +32,7 @@ const Nurturing = () => {
                         mb: 2,
                     }}
                 >
-                    Nurturing holistic health & prioritizing wellbeing in a clean environment
+                    {t('nurturing.title')}
                 </Typography>
 
                 <Typography
@@ -44,8 +46,7 @@ const Nurturing = () => {
                         mx: 'auto',
                     }}
                 >
-                    Time is running out to save our precious planet. Without swift and decisive action today, we may
-                    forever lose our chance to protect Earth – the singular oasis we call home.
+                    {t('nurturing.description')}
                 </Typography>
 
                 <Button
@@ -65,7 +66,7 @@ const Nurturing = () => {
                         },
                     }}
                 >
-                    I Pledge
+                    {t('nurturing.button_text')}
                 </Button>
             </Container>
         </Box>

@@ -3,8 +3,6 @@ import {Box} from '@mui/material';
 import journeyImg from '../../assets/images/home/Group 226.png';
 
 const Journey = () => {
-
-
     return (
         <Box
             component="img"

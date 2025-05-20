@@ -3,5 +3,96 @@
   "about_us": "About Us",
   "contact_us": "Contact Us",
   "commercial": "Commercial",
-  "residential": "Residential"
+  "residential": "Residential",
+  "gujarati": "Gujarati",
+  "english": "English",
+  "hero_title": "Building Real Estate Eco System",
+  "about_dwarkesh_title": "About Dwarkesh",
+  "about_dwarkesh_description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing",
+  "filters": {
+    "all": "ALL",
+    "2bhk": "2 BHK",
+    "3bhk": "3 BHK",
+    "4bhk": "4 BHK",
+    "showrooms": "ShowRooms",
+    "office": "Office"
+  },
+  "features": {
+    "section_title": "Most Trusted Realty Group",
+    "section_subtitle": "Why we are the best",
+    "intelligent": "Intelligent Design",
+    "quality": "Quality Assurance",
+    "professional": "Professional Approach",
+    "lifetime": "Lifetime Durability"
+  },
+  "nurturing": {
+    "title": "Nurturing holistic health & prioritizing wellbeing in a clean environment",
+    "description": "Time is running out to save our precious planet. Without swift and decisive action today, we may forever lose our chance to protect Earth – the singular oasis we call home.",
+    "button_text": "I Pledge"
+  },
+  "stats": [
+    {
+      "value": "94%",
+      "description": "of the world’s population breathes polluted air"
+    },
+    {
+      "value": "42",
+      "description": "million trees are cut down every day worldwide"
+    },
+    {
+      "value": "2X",
+      "description": "The asthma rate in India is significant, with approximately 34.3 million individuals affected"
+    }
+  ],
+  "about": {
+    "hero": {
+      "title": "ABOUT US",
+      "location": "Gujarat – Surat"
+    },
+    "visionMission": {
+      "vision": {
+        "title": "Our Vision",
+        "description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      },
+      "mission": {
+        "title": "Our Mission",
+        "description": "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+      }
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "CONTACT US",
+      "location": "Gujarat – Surat"
+    },
+    "contact": {
+      "form": {
+        "title": "Show Your Interest",
+        "subtitle": "Provide your details below to submit your interest.",
+        "placeholders": {
+          "project": "Project Interested For – Dwarkesh",
+          "firstName": "First Name *",
+          "lastName": "Last Name *",
+          "contactNo": "Contact No *",
+          "email": "Email ID *",
+          "message": "Your Message *"
+        },
+        "submit": "Submit Interest"
+      },
+      "info": {
+        "phone": "+91 87695 93034",
+        "address": "New Iconic Road jakatnak, Surat."
+      }
+    }
+  },
+  "heroSection": {
+    "ongoingProject": "On-Going Project",
+    "scrollToDiscover": "Scroll To Discover"
+  },
+  "projectGallery": {
+    "title": "Project Gallery"
+  },
+  "floorPlans": {
+    "title": "Floor Plans"
+  }
 }

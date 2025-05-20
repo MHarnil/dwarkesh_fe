@@ -13,15 +13,25 @@ import {
 import {ZoomOutMap, Search, ArrowForward} from '@mui/icons-material';
 import {useNavigate} from "react-router-dom";
 import propertyFloorPlans from "../propertyFloorPlans.js";
+import {useTranslation} from "react-i18next";
 
 
 const PropertyGallery = () => {
+    const { t } = useTranslation();
     const [activeFilter, setActiveFilter] = useState('ALL');
     const navigate = useNavigate();
     const [openDialog, setOpenDialog] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
 
-    const filters = ['ALL', '2 BHK', '3 BHK', '4 BHK', 'ShowRooms', 'Office'];
+    const filters = [
+        { key: 'all', label: 'ALL' },
+        { key: '2bhk', label: '2 BHK' },
+        { key: '3bhk', label: '3 BHK' },
+        { key: '4bhk', label: '4 BHK' },
+        { key: 'showrooms', label: 'ShowRooms' },
+        { key: 'office', label: 'Office' }
+    ];
+
 
     const filteredProperties =
         activeFilter === 'ALL'
@@ -55,8 +65,8 @@ const PropertyGallery = () => {
                         {filters?.map((filter) => (
                             <Button
                                 key={filter}
-                                variant={activeFilter === filter ? 'contained' : 'outlined'}
-                                onClick={() => setActiveFilter(filter)}
+                                variant={activeFilter === filter.label ? 'contained' : 'outlined'}
+                                onClick={() => setActiveFilter(filter.label)}
                                 sx={{
                                     minWidth: 'auto',
                                     border: 'none',
@@ -74,7 +84,7 @@ const PropertyGallery = () => {
                                     whiteSpace: 'nowrap',
                                 }}
                             >
-                                {filter}
+                                {t(`filters.${filter.key}`)}
                             </Button>
                         ))}
                     </Stack>
@@ -83,7 +93,7 @@ const PropertyGallery = () => {
 
                 <Grid container spacing={2}>
                     {filteredProperties?.map((property) => (
-                        <Grid item size={{xs: 6, md: 4, lg: 3}} key={property.id}>
+                        <Grid item size={{xs: 6,sm:4, md: 3, lg: 3}} key={property.id}>
                             <Card onClick={() => navigate(`/property/${property.id}`)}
                                 sx={{
                                     borderRadius: '0',
@@ -232,8 +242,6 @@ const PropertyGallery = () => {
                     />
                 </Box>
             </Modal>
-
-
         </Box>
     );
 };

@@ -4,22 +4,36 @@ import tntelligent from '../../assets/images/home/14 1.png';
 import quality from '../../assets/images/home/15 1.png';
 import professional from '../../assets/images/home/16 1.png';
 import lifetime from '../../assets/images/home/17 1.png';
+import {useTranslation} from "react-i18next";
 
-const features = [
-    {img: tntelligent, title: 'INTELLIGENT DESIGN'},
-    {img: quality, title: 'QUALITY ASSURANCE'},
-    {img: professional, title: 'PROFESSIONAL APPROACH'},
-    {img: lifetime, title: 'LIFETIME DURABILITY'}
-];
 
 const FeatureSection = () => {
+    const {t} = useTranslation();
+    const features = [
+        {img: tntelligent, title: t('features.intelligent')},
+        {img: quality, title: t('features.quality')},
+        {img: professional, title: t('features.professional')},
+        {img: lifetime, title: t('features.lifetime')}
+    ];
+
     return (
         <Box sx={{py: 8, textAlign: 'center'}}>
-            <Typography sx={{fontSize: {xs: '15px', md: '58px'}, fontWeight: '600', color: '#1B1B1B'}}>
-                Most Trusted Realty Group
+            <Typography
+                variant="h4"
+                align="center"
+                gutterBottom
+                sx={{
+                    fontWeight: 700,
+                    fontSize: {xs: '24px', sm: '30px', md: '36px', lg: '40px'},
+                    letterSpacing: '1px',
+                    textTransform: 'uppercase',
+                    color: '#1B1B1B'
+                }}
+            >
+                {t('features.section_title')}
             </Typography>
-            <Typography sx={{fontSize: {xs: '26px', md: '40px'}, fontWeight: '600', color: '#1B1B1B', mb: 3}}>
-                Why we are the best
+            <Typography sx={{fontSize: {xs: '18px', md: '26px'}, fontWeight: '600', color: '#1B1B1B', mb: 3}}>
+                {t('features.section_subtitle')}
             </Typography>
 
             <Grid container spacing={3} justifyContent="center">
@@ -46,14 +60,14 @@ const FeatureSection = () => {
                                 src={feature.img}
                                 alt={feature.title}
                                 sx={{
-                                    width: {xs: 64, md: 80, lg: 123},
-                                    height: {xs: 64, md: 80, lg: 123},
+                                    width: {xs: 64, md: 80, lg: 110},
+                                    height: {xs: 64, md: 80, lg: 110},
                                     objectFit: 'contain',
                                     mb: 2
                                 }}
                             />
                             <Typography
-                                sx={{fontSize: {xs: '15px', md: '18px', lg: '26px'}, fontWeight: {md: 600, lg: 600}}}>
+                                sx={{fontSize: {xs: '15px', md: '18px', lg: '32px'}, fontWeight: {md: 600, lg: 600}}}>
                                 {feature.title}
                             </Typography>
                         </Card>

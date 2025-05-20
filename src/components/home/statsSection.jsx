@@ -4,6 +4,7 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import {useTranslation} from "react-i18next";
 
 const stats = [
     {
@@ -50,9 +51,12 @@ const StatBox = ({value, description}) => (
 );
 
 const StatsSection = () => {
+    const { t } = useTranslation();
     const theme = useTheme();
     const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
     const swiperRef = useRef(null);
+
+    const stats = t('stats', { returnObjects: true });
 
     const handleNext = () => {
         if (swiperRef.current && swiperRef.current.swiper) {
