@@ -12,7 +12,7 @@ import {
     useMediaQuery,
     useTheme,
     Container,
-    Switch
+    Switch,Link
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import {useTranslation} from 'react-i18next';
@@ -38,7 +38,6 @@ export default function Header() {
         commercial: '/commercial',
         residential: '/residential'
     };
-
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -69,7 +68,7 @@ export default function Header() {
                     boxShadow: scrolled ? '0 4px 20px rgba(0, 0, 0, 0.2)' : 'none',
                 }}
             >
-            <Container maxWidth="xl">
+                <Container maxWidth="xl">
                     <Toolbar
                         sx={{
                             justifyContent: 'space-between',
@@ -101,7 +100,7 @@ export default function Header() {
                         <Box sx={{display: 'flex', alignItems: 'center', gap: 2}}>
                             <Box
                                 sx={{
-                                    display: { xs: 'none', lg: 'flex' },
+                                    display: {xs: 'none', lg: 'flex'},
                                     alignItems: 'center',
                                     gap: 1,
                                     mr: 4,
@@ -154,13 +153,15 @@ export default function Header() {
                                         fontSize: '16px',
                                     }}
                                 >
-                                   {t('english')}
+                                    {t('english')}
                                 </Typography>
                             </Box>
 
-                            <Box sx={{width: '35px', height: '35px'}}>
-                                <Box component="img" src={phone} sx={{width: '100%', height: '100%'}}/>
-                            </Box>
+                            <Link href="tel:+919601815727" style={{textDecoration: 'none'}}>
+                                <Box sx={{width: '35px', height: '35px'}}>
+                                    <Box component="img" src={phone} sx={{width: '100%', height: '100%'}}/>
+                                </Box>
+                            </Link>
 
                             {isMobile && (
                                 <>
@@ -204,7 +205,8 @@ export default function Header() {
                                         >
                                             <List>
                                                 {navItems.map((text) => (
-                                                    <ListItem button key={text} onClick={() => navigate(navRoutes[text])}>
+                                                    <ListItem button key={text}
+                                                              onClick={() => navigate(navRoutes[text])}>
                                                         <ListItemText
                                                             primary={text}
                                                             primaryTypographyProps={{sx: {color: '#fff'}}}

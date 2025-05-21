@@ -37,7 +37,7 @@ const FeatureSection = () => {
             </Typography>
 
             <Grid container spacing={3} justifyContent="center">
-                {features.map((feature, index) => (
+                {features?.map((feature, index) => (
                     <Grid key={index} item xs={6} sm={6} md={3}>
                         <Card
                             elevation={3}

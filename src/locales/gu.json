@@ -15,7 +15,8 @@
     "3bhk": "3 બીએચકે",
     "4bhk": "4 બીએચકે",
     "showrooms": "શો રૂમ",
-    "office": "ઓફિસ"
+    "office": "ઓફિસ",
+    "commercial": "વાણિજ્યિક"
   },
   "features": {
     "section_title": "સૌથી વિશ્વસનીય રિયલ્ટી જૂથ",
@@ -44,6 +45,11 @@
       "description": "ભારતમાં દમની સારવારના દરમાં નોંધપાત્ર વધારો થયો છે, લગભગ ૩૪.૩ મિલિયન લોકો અસરગ્રસ્ત છે"
     }
   ],
+  "Properties": {
+    "commercialProperties": "વ્યવસાયિક સંપત્તિઓ",
+    "residentialProperties": "નિવાસી સંપત્તિઓ",
+    "location": "ગુજરાત – સુરત"
+  },
   "about": {
     "hero": {
       "title": "અમારા વિશે",

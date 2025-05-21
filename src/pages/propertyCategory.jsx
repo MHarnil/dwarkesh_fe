@@ -1,117 +1,73 @@
-import React, {useState} from 'react';
-import {
-    Box,
-    Container,
-    Grid,
-    Typography,
-    Button,
-    Card,
-    CardMedia,
-    IconButton,
-    Stack, Modal
-} from '@mui/material';
-import {ZoomOutMap, Search, ArrowForward} from '@mui/icons-material';
-import {useNavigate} from "react-router-dom";
-import propertyFloorPlans from "../propertyFloorPlans.js";
+import {useLocation} from 'react-router-dom';
+import {Typography, Box, Grid, Card, CardMedia, Container, IconButton, Modal} from '@mui/material';
+import {useNavigate} from 'react-router-dom';
+import propertyFloorPlans from "../components/propertyFloorPlans.js";
+import {ArrowForward, Search, ZoomOutMap} from "@mui/icons-material";
+import React, {useState} from "react";
+import bgimg from '../assets/images/about/IMG-20250508-WA0051 3.png';
 import {useTranslation} from "react-i18next";
 
-
-const PropertyGallery = () => {
+const PropertyCategory = () => {
     const { t } = useTranslation();
-    const [activeFilter, setActiveFilter] = useState('ALL');
+    const location = useLocation();
     const navigate = useNavigate();
+    const isCommercial = location.pathname === '/commercial';
     const [openDialog, setOpenDialog] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
 
-    const filters = [
-        { key: 'all', label: 'ALL' },
-        { key: '2bhk', label: '2 BHK' },
-        { key: '3bhk', label: '3 BHK' },
-        { key: 'showrooms', label: 'ShowRooms' },
-        { key: 'office', label: 'Office' },
-        { key: 'commercial', label: 'Commercial' }
-    ];
-
-
-    const filteredProperties =
-        activeFilter === 'ALL'
-            ? propertyFloorPlans
-            : propertyFloorPlans.filter(property =>
-                property.categories.includes(activeFilter)
-            );
-
+    // Filter properties based on type
+    const properties = propertyFloorPlans.filter(
+        (property) => property.propertyType === (isCommercial ? 'Commercial' : 'Residential')
+    );
 
     return (
-        <Box sx={{py: 10, backgroundColor: '#FAFBFF'}}>
-            <Container maxWidth="xl">
-                <Box sx={{display: 'flex', justifyContent: 'center'}}>
-                    <Stack
-                        direction="row"
-                        spacing={{xs: 1, sm: 2, md: 2}}
-                        sx={{
-                            mb: {xs: 2, sm: 3},
-                            pb: 1,
-                            overflowX: 'auto',
-                            maxWidth: '100%',
-                            '&::-webkit-scrollbar': {
-                                height: '4px',
-                            },
-                            '&::-webkit-scrollbar-thumb': {
-                                backgroundColor: '#bdbdbd',
-                                borderRadius: '10px',
-                            },
-                        }}
-                    >
-                        {filters?.map((filter) => (
-                            <Button
-                                key={filter}
-                                variant={activeFilter === filter.label ? 'contained' : 'outlined'}
-                                onClick={() => setActiveFilter(filter.label)}
-                                sx={{
-                                    minWidth: 'auto',
-                                    border: 'none',
-                                    boxShadow: 'none',
-                                    px: {xs: 1.5, sm: 2},
-                                    py: {xs: 0.5, sm: 0.75},
-                                    borderRadius: '5px',
-                                    fontSize: {xs: '13px', sm: '14px', md: '16px'},
-                                    fontWeight: 400,
-                                    backgroundColor: activeFilter === filter ? '#000' : 'transparent',
-                                    color: activeFilter === filter ? '#fff' : '#747474',
-                                    '&:hover': {
-                                        backgroundColor: activeFilter === filter ? '#000' : '#f0f0f0',
-                                    },
-                                    whiteSpace: 'nowrap',
-                                }}
-                            >
-                                {t(`filters.${filter.key}`)}
-                            </Button>
-                        ))}
-                    </Stack>
-                </Box>
-
+        <Box sx={{ backgroundColor: '#FAFBFF'}}>
+            <Box
+                sx={{
+                    height: '100vh',
+                    width: '100%',
+                    backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${bgimg})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    color: '#fff',
+                    textAlign: 'center',
+                }}
+            >
+                <Typography variant="h2" component="h1" fontWeight="bold">
+                    {isCommercial ? t('Properties.commercialProperties') : t('Properties.residentialProperties')}
+                </Typography>
+                <Typography variant="h6" mt={22} sx={{fontSize: '30px', fontWeight: '700'}}>
+                    {t('Properties.location')}
+                </Typography>
+            </Box>
+            <Container maxWidth="xl" sx={{py:12}}>
                 <Grid container spacing={2}>
-                    {filteredProperties?.map((property) => (
-                        <Grid item size={{xs: 6,sm:4, md: 3, lg: 3}} key={property.id}>
+                    {properties?.map((property) => (
+                        <Grid item size={{xs: 6, sm: 4, md: 3, lg: 3}} key={property.id}>
                             <Card onClick={() => navigate(`/property/${property.id}`)}
-                                sx={{
-                                    borderRadius: '0',
-                                    cursor: 'pointer',
-                                    height: '100%',
-                                    width: '100%',
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    position: 'relative',
-                                    boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
-                                    overflow: 'hidden',
-                                    '&:hover': {
-                                        boxShadow: '0 6px 12px rgba(0,0,0,0.15)',
-                                    },
-                                    '&:hover .hover-content': {
-                                        opacity: 1,
-                                        visibility: 'visible',
-                                    }
-                                }}
+                                  sx={{
+                                      borderRadius: '0',
+                                      cursor: 'pointer',
+                                      height: '100%',
+                                      width: '100%',
+                                      display: 'flex',
+                                      flexDirection: 'column',
+                                      position: 'relative',
+                                      boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+                                      overflow: 'hidden',
+                                      '&:hover': {
+                                          boxShadow: '0 6px 12px rgba(0,0,0,0.15)',
+                                      },
+                                      '&:hover .hover-content': {
+                                          opacity: 1,
+                                          visibility: 'visible',
+                                      }
+                                  }}
                             >
                                 <Box sx={{position: 'relative'}}>
                                     <CardMedia
@@ -120,7 +76,6 @@ const PropertyGallery = () => {
                                         image={property.image}
                                         alt={property.name}
                                     />
-
                                     <Box
                                         className="hover-content"
                                         sx={{
@@ -166,15 +121,15 @@ const PropertyGallery = () => {
                                                 }}
                                                 sx={{
                                                     backgroundColor: '#fff',
-                                                    '&:hover': { backgroundColor: '#EFBA1D' },
-                                                    width: { xs: 18, sm: 45 },
-                                                    height: { xs: 18, sm: 45 },
+                                                    '&:hover': {backgroundColor: '#EFBA1D'},
+                                                    width: {xs: 18, sm: 45},
+                                                    height: {xs: 18, sm: 45},
                                                     borderRadius: '5px',
                                                     color: '#000',
-                                                    p: { xs: 2, sm: 0 }
+                                                    p: {xs: 2, sm: 0}
                                                 }}
                                             >
-                                                <ZoomOutMap />
+                                                <ZoomOutMap/>
                                             </IconButton>
                                             <IconButton
                                                 sx={{
@@ -245,4 +200,4 @@ const PropertyGallery = () => {
     );
 };
 
-export default PropertyGallery;
+export default PropertyCategory;

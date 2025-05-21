@@ -7,6 +7,7 @@ import Header from "./components/global/header.jsx";
 import Footer from "./components/global/footer.jsx";
 import AboutPage from "./pages/aboutPage.jsx";
 import ContactUs from "./pages/contactUs.jsx";
+import PropertyCategory from "./pages/propertyCategory.jsx";
 
 const App = () => {
 
@@ -27,6 +28,8 @@ const App = () => {
                 <Route path="/property/:id" element={<PropertyDetail/>}/>
                 <Route path="/about" element={<AboutPage/>}/>
                 <Route path="/contact" element={<ContactUs/>}/>
+                <Route path="/commercial" element={<PropertyCategory />} />
+                <Route path="/residential" element={<PropertyCategory />} />
             </Routes>
             <Footer/>
         </Router>

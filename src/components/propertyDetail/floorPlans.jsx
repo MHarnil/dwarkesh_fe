@@ -53,7 +53,7 @@ const FloorPlansSection = () => {
 
                 <Grid container spacing={3} justifyContent="center">
                     {floorData?.floorPlans?.map((plan, index) => (
-                        <Grid item xs={6} sm={4} key={index}>
+                        <Grid item size={{xs:6,sm:4}} key={index}>
                             <Box onClick={() => handleOpen(plan.img)} sx={{ cursor: 'pointer' }}>
                                 <Box sx={{ position: 'relative', overflow: 'hidden' }}>
                                     <img
@@ -112,29 +112,29 @@ const FloorPlansSection = () => {
                         left: 0,
                         width: '100vw',
                         height: '100vh',
-                        backgroundColor: 'rgba(0,0,0,0.3)',
+                        backgroundColor: 'rgba(0, 0, 0, 0.1)',
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
-                        cursor: 'pointer',
                         zIndex: 1300,
+                        p: 2,
                     }}
                 >
                     {selectedImage && (
-                        <img
+                        <Box
+                            component="img"
                             src={selectedImage}
                             alt="Fullscreen"
-                            style={{
-                                width: '500px',
-                                height: '500px',
+                            sx={{
+                                maxWidth: '100%',
+                                maxHeight: '100%',
                                 objectFit: 'contain',
-                                maxWidth: '100vw',
-                                maxHeight: '100vh',
                             }}
                         />
                     )}
                 </Box>
             </Modal>
+
         </Box>
     );
 };

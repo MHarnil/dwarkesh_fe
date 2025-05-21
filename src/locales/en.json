@@ -13,9 +13,9 @@
     "all": "ALL",
     "2bhk": "2 BHK",
     "3bhk": "3 BHK",
-    "4bhk": "4 BHK",
     "showrooms": "ShowRooms",
-    "office": "Office"
+    "office": "Office",
+    "commercial": "Commercial"
   },
   "features": {
     "section_title": "Most Trusted Realty Group",
@@ -44,6 +44,11 @@
       "description": "The asthma rate in India is significant, with approximately 34.3 million individuals affected"
     }
   ],
+  "Properties": {
+    "commercialProperties": "COMMERCIAL PROPERTIES",
+    "residentialProperties": "RESIDENTIAL PROPERTIES",
+    "location": "Gujarat – Surat"
+  },
   "about": {
     "hero": {
       "title": "ABOUT US",
