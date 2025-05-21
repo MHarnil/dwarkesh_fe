@@ -80,7 +80,7 @@ export default function Header() {
                         </Box>
                         {!isMobile && (
                             <Box sx={{display: 'flex', alignItems: 'center', gap: {md: 2, lg: 6}}}>
-                                {navItems.map((item) => (
+                                {navItems?.map((item) => (
                                     <Typography
                                         onClick={() => navigate(navRoutes[item])}
                                         key={item}
@@ -204,11 +204,11 @@ export default function Header() {
                                             onKeyDown={toggleDrawer(false)}
                                         >
                                             <List>
-                                                {navItems.map((text) => (
+                                                {navItems?.map((text) => (
                                                     <ListItem button key={text}
                                                               onClick={() => navigate(navRoutes[text])}>
                                                         <ListItemText
-                                                            primary={text}
+                                                            primary={t(text)}
                                                             primaryTypographyProps={{sx: {color: '#fff'}}}
                                                         />
                                                     </ListItem>
