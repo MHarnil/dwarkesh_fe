@@ -4,6 +4,14 @@
   "contact_us": "Contact Us",
   "commercial": "Commercial",
   "residential": "Residential",
+  "reach_us": "REACH US",
+  "careers": "CAREERS",
+  "blogs": "BLOGS",
+  "company_name": "Dwarkesh Group",
+  "all_rights_reserved": "All Rights Reserved",
+  "disclaimer": "Disclaimer",
+  "privacy_policy": "Privacy Policy",
+  "cookie_policy": "Cookie Policy",
   "gujarati": "Gujarati",
   "english": "English",
   "hero_title": "Building Real Estate Eco System",
@@ -99,5 +107,71 @@
   },
   "floorPlans": {
     "title": "Floor Plans"
+  },
+  "propertyType": {
+    "residential": "Residential",
+    "commercial": "Commercial",
+    "karuneshLuxuria": {
+      "title": "KARUNESH LUXURIA",
+      "subTitle": "A LUXURIES FLATS",
+      "location": "5 & 6 BHK Ultra Luxury apartments & Penthouses",
+      "streetAddress": "6XW2+RJ, Pasodara, Surat, Gujarat 394326"
+    },
+    "karuneshBusinessCenter1": {
+      "title": "KARUNESH BUSINESS CENTER - 1",
+      "subTitle": "COMMERCIAL AND BUSINESS",
+      "location": "Commercial and business",
+      "streetAddress": "Opposite Abhisheck Arcade, Yogichowk Road, surat."
+    },
+    "karuneshBusinessCenter2": {
+      "title": "KARUNESH BUSINESS CENTER - 2",
+      "subTitle": "COMMERCIAL AND BUSINESS",
+      "location": "Commercial and business",
+      "streetAddress": "OBehind Nilkanth Plaza, Kiran Chowk, Yogichowk Road, Surat."
+    },
+    "karuneshBusinessCenter3": {
+      "title": "KARUNESH BUSINESS CENTER - 3",
+      "subTitle": "COMMERCIAL AND BUSINESS",
+      "location": "Commercial and business",
+      "streetAddress": "Beside Saundarya Heights, Nr. Savaliya Circle, Yogi Chowk Road, Surat."
+    },
+    "karuneshTower": {
+      "title": "KARUNESH TOWER",
+      "subTitle": "COMMERCIAL AND BUSINESS",
+      "location": "5 & 6 BHK Ultra Luxury apartments & Penthouses",
+      "streetAddress": "Opposite Abhisheck Arcade, Yogichowk Road, surat."
+    },
+    "residentialPlot": {
+      "title": "RESIDENTIAL PLOT",
+      "name": "PLOT",
+      "location": "Commercial and business",
+      "streetAddress": "New Iconic Road jakatnak, Surat."
+    },
+    "karuneshHomes": {
+      "title": "KARUNESH HOMES",
+      "subTitle": "COMMERCIAL AND BUSINESS",
+      "location": "Commercial and business",
+      "streetAddress": "Opposite Abhisheck Arcade, Yogichowk Road, surat."
+    },
+    "categories": {
+      "all": "ALL",
+      "2bhk": "2 BHK",
+      "3bhk": "3 BHK",
+      "office": "Office",
+      "showroom": "ShowRooms"
+    },
+    "floorPlans": {
+      "ground": "Ground Floor Plan",
+      "typical": "Typical Layout",
+      "1to14": "1 to 14 Floor Plan",
+      "firstSecond": "First and Second Floor Plan",
+      "thirdFourth": "Third and Fourth Floor Plan",
+      "first": "First Floor Plan",
+      "second": "Second Floor Plan",
+      "iconVilla": "Icon Villa Plan",
+      "park": "Karunesh Park Plan",
+      "texpa": "Karunesh Texpa Plan",
+      "typicalFloor": "Typical Floor Plan"
+    }
   }
 }

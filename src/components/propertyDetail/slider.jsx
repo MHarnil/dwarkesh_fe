@@ -34,7 +34,7 @@ const ProjectGallerySlider = () => {
 
     const numericId = Number(id);
 
-    const selectedProperty = propertyFloorPlans.find(
+    const selectedProperty = propertyFloorPlans(t).find(
         (property) => property.id === numericId
     );
 

@@ -20,7 +20,7 @@ const HeroSection = () => {
 
     const { t, i18n } = useTranslation();
 
-    const property = propertyFloorPlans.find(property => property.id === parseInt(id));
+    const property = propertyFloorPlans(t).find(property => property.id === parseInt(id));
 
     if (!property) {
         return <Typography variant="h6">Property Not Found</Typography>;

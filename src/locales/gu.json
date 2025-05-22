@@ -4,6 +4,14 @@
   "contact_us": "સંપર્ક કરો",
   "commercial": "વેપારિક",
   "residential": "નિવાસસ્થાન",
+  "reach_us": "અમારો સંપર્ક કરો",
+  "careers": "કારકિર્દી",
+  "blogs": "બ્લોગ્સ",
+  "company_name": "દ્વારકેશ ગ્રૂપ",
+  "all_rights_reserved": "સર્વ હક સુરક્ષિત",
+  "disclaimer": "અસ્વીકારપત્ર",
+  "privacy_policy": "ગોપનીયતા નીતિ",
+  "cookie_policy": "કૂકી નીતિ",
   "gujarati": "ગુજરાતી",
   "english": "અંગ્રેજી",
   "hero_title": "રીયલ એસ્ટેટ ઇકો સિસ્ટમ નિર્માણ",
@@ -100,5 +108,71 @@
   },
   "floorPlans": {
     "title": "મકાન યોજના"
+  },
+  "propertyType": {
+    "residential": "રહેઠાણ",
+    "commercial": "વાણિજ્યક",
+    "karuneshLuxuria": {
+      "title": "કરુણેશ લક્ઝુરિયા",
+      "subTitle": "લક્ઝુરિયસ ફ્લેટ્સ",
+      "location": "૫ અને ૬ BHK અલ્ટ્રા લક્ઝરી એપાર્ટમેન્ટ્સ અને પેન્થાઉસ",
+      "streetAddress": "6XW2+RJ, પાસોદરા, સુરત, ગુજરાત 394326"
+    },
+    "karuneshBusinessCenter1": {
+      "title": "કરુણેશ બિઝનેસ સેન્ટર - ૧",
+      "subTitle": "કમર્શિયલ અને બિઝનેસ",
+      "location": "કમર્શિયલ અને બિઝનેસ",
+      "streetAddress": "અભિષેક આર્કેડ સામે, યોગીચોક રોડ, સુરત"
+    },
+    "karuneshBusinessCenter2": {
+      "title": "કરુણેશ બિઝનેસ સેન્ટર - ૨",
+      "subTitle": "કમર્શિયલ અને બિઝનેસ",
+      "location": "કમર્શિયલ અને બિઝનેસ",
+      "streetAddress": "નિલકંઠ પ્લાઝા પાછળ, કિરણ ચોક, યોગીચોક રોડ, સુરત"
+    },
+    "karuneshBusinessCenter3": {
+      "title": "કરુણેશ બિઝનેસ સેન્ટર - ૩",
+      "subTitle": "કમર્શિયલ અને બિઝનેસ",
+      "location": "કમર્શિયલ અને બિઝનેસ",
+      "streetAddress": "સૌંદર્ય હાઈટ્સ પાસે, નજીક સાળવિયા સર્કલ, યોગી ચોક રોડ, સુરત"
+    },
+    "karuneshTower": {
+      "title": "કરુણેશ ટાવર",
+      "subTitle": "કમર્શિયલ અને બિઝનેસ",
+      "location": "૫ અને ૬ BHK અલ્ટ્રા લક્ઝરી એપાર્ટમેન્ટ્સ અને પેન્થાઉસ",
+      "streetAddress": "અભિષેક આર્કેડ સામે, યોગીચોક રોડ, સુરત"
+    },
+    "residentialPlot": {
+      "title": "રેસિડેન્શિયલ પ્લોટ",
+      "name": "પ્લોટ",
+      "location": "કમર્શિયલ અને બિઝનેસ",
+      "streetAddress": "ન્યૂ આઈકોનિક રોડ જકાતનાકા, સુરત"
+    },
+    "karuneshHomes": {
+      "title": "કરુણેશ હોમ્સ",
+      "subTitle": "કમર્શિયલ અને બિઝનેસ",
+      "location": "કમર્શિયલ અને બિઝનેસ",
+      "streetAddress": "અભિષેક આર્કેડ સામે, યોગીચોક રોડ, સુરત"
+    },
+    "categories": {
+      "all": "બધું",
+      "2bhk": "૨ BHK",
+      "3bhk": "૩ BHK",
+      "office": "ઓફિસ",
+      "showroom": "શોરૂમ"
+    },
+    "floorPlans": {
+      "ground": "ગ્રાઉન્ડ ફ્લોર પ્લાન",
+      "typical": "ટિપિકલ લેઆઉટ",
+      "1to14": "૧ થી ૧૪ ફ્લોર પ્લાન",
+      "firstSecond": "પ્રથમ અને બીજો ફ્લોર પ્લાન",
+      "thirdFourth": "ત્રીજો અને ચોથો ફ્લોર પ્લાન",
+      "first": "પ્રથમ માળનો પ્લાન",
+      "second": "બીજા માળનો પ્લાન",
+      "iconVilla": "આઇકોન વિલ્લા પ્લાન",
+      "park": "કરુણેશ પાર્ક પ્લાન",
+      "texpa": "કરુણેશ ટેક્સપા પ્લાન",
+      "typicalFloor": "ટિપિકલ ફ્લોર પ્લાન"
+    }
   }
 }

@@ -12,8 +12,8 @@ import {useTranslation} from "react-i18next";
 
 const FloorPlansSection = () => {
     const { id } = useParams();
-    const floorData = propertyFloorPlans.find(plan => plan.id === Number(id));
     const { t } = useTranslation();
+    const floorData = propertyFloorPlans(t).find(plan => plan.id === Number(id));
 
     const [open, setOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);

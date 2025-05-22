@@ -12,25 +12,27 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import RoomIcon from '@mui/icons-material/Room';
 import {useParams} from "react-router-dom";
 import propertyFloorPlans from '../propertyFloorPlans';
+import {useTranslation} from "react-i18next";
 
 const InterestSection = () => {
     const { id } = useParams();
-    const property = propertyFloorPlans.find((item) => item.id === Number(id));
+    const { t } = useTranslation();
+    const property = propertyFloorPlans(t).find((item) => item.id === Number(id));
     return (
         <Container maxWidth="lg" sx={{py: 6}}>
             <Grid container spacing={3} alignItems="start" justifyContent="center">
                 <Grid item xs={12} sm={6} md={6}
                       sx={{backgroundColor: '#EBEBEB', p: 5, width: {xs: '100%', md: '48%'} }}>
                     <Typography variant="h5" fontWeight="bold" gutterBottom sx={{fontSize:{xs:'28px',md:'38px'}, fontWeight: '700'}}>
-                        Show Your Interest
+                        {t('contact.contact.form.title')}
                     </Typography>
                     <Typography sx={{color: '#CA7306', mb: 2, fontSize: '15px', fontWeight: '700'}}>
-                        Provide your details below to submit your interest.
+                        {t('contact.contact.form.subtitle')}
                     </Typography>
 
                     <FormControl fullWidth sx={{mb: 2, backgroundColor: '#FFF', height: '45px'}}>
                         <OutlinedInput
-                            placeholder="Project Interested For – Dwarkesh"
+                            placeholder={t('contact.contact.form.placeholders.project')}
                             sx={{
                                 height: '45px',
                                 border: 'none',
@@ -51,7 +53,7 @@ const InterestSection = () => {
                     <Box sx={{display: 'flex', gap: 2, flexDirection: {xs: 'column', sm: 'row'}}}>
                         <FormControl fullWidth sx={{mb: 2, backgroundColor: '#FFF', height: '45px'}}>
                             <OutlinedInput
-                                placeholder="First Name *"
+                                placeholder={t('contact.contact.form.placeholders.firstName')}
                                 sx={{
                                     height: '45px',
                                     border: 'none',
@@ -64,7 +66,7 @@ const InterestSection = () => {
                         </FormControl>
                         <FormControl fullWidth sx={{mb: 2, backgroundColor: '#FFF', height: '45px'}}>
                             <OutlinedInput
-                                placeholder="Last Name *"
+                                placeholder={t('contact.contact.form.placeholders.lastName')}
                                 sx={{
                                     height: '45px',
                                     border: 'none',
@@ -80,7 +82,7 @@ const InterestSection = () => {
                     <Box sx={{display: 'flex', gap: 2, flexDirection: {xs: 'column', sm: 'row'}}}>
                         <FormControl fullWidth sx={{mb: 2, backgroundColor: '#FFF', height: '45px'}}>
                             <OutlinedInput
-                                placeholder="Contact No *"
+                                placeholder={t('contact.contact.form.placeholders.contactNo')}
                                 sx={{
                                     height: '45px',
                                     border: 'none',
@@ -93,7 +95,7 @@ const InterestSection = () => {
                         </FormControl>
                         <FormControl fullWidth sx={{mb: 2, backgroundColor: '#FFF', height: '45px'}}>
                             <OutlinedInput
-                                placeholder="Email ID *"
+                                placeholder={t('contact.contact.form.placeholders.email')}
                                 sx={{
                                     height: '45px',
                                     border: 'none',
@@ -108,7 +110,7 @@ const InterestSection = () => {
 
                     <FormControl fullWidth sx={{mb: 2, backgroundColor: '#FFF'}}>
                         <OutlinedInput
-                            placeholder="Your Message *"
+                            placeholder={t('contact.contact.form.placeholders.message')}
                             multiline
                             rows={4}
                             sx={{
@@ -140,7 +142,7 @@ const InterestSection = () => {
                             },
                         }}
                     >
-                        Submit Interest
+                        {t('contact.contact.form.submit')}
                     </Button>
                 </Grid>
 

@@ -8,14 +8,23 @@ import {
 import {Link as RouterLink, useNavigate} from 'react-router-dom';
 import logo from '../../assets/images/logo/IMG_9066 2.png';
 import propertyFloorPlans from "../propertyFloorPlans.js";
+import {useTranslation} from "react-i18next";
 
 const Footer = () => {
-
+    const {t} = useTranslation();
     const navigate = useNavigate();
 
-    // Filter projects by propertyType
-    const residentialProjects = propertyFloorPlans.filter(p => p.propertyType === 'Residential');
-    const commercialProjects = propertyFloorPlans.filter(p => p.propertyType === 'Commercial');
+    // ✅ Fixed: propertyFloorPlans is an array, not a function
+    // const residentialProjects = propertyFloorPlans(t).filter(p => p.propertyType === 'Residential');
+    // const commercialProjects = propertyFloorPlans(t).filter(p => p.propertyType === 'Commercial');
+
+    const commercialProjects = propertyFloorPlans(t).filter(
+        (property) => property.propertyType === t('propertyType.commercial')
+    );
+
+    const residentialProjects = propertyFloorPlans(t).filter(
+        (property) => property.propertyType === t('propertyType.residential')
+    );
 
     return (
         <Box sx={{backgroundColor: '#FBFBFB', pt: 10, pb: 3, borderTop: '1px solid #ddd'}}>
@@ -48,22 +57,25 @@ const Footer = () => {
                             </Box>
                         </Link>
 
-                        <Box sx={{
-                            display: 'flex',
-                            alignItems: 'flex-start',
-                            justifyContent: {xs: 'center', md: 'left'},
-                            mb: 1
-                        }}>
-                            <Email sx={{mr: 1, color: '#CA7306'}}/>
-                            <Typography sx={{
-                                fontSize: {xs: '14px', sm: '16px', md: '18px'},
-                                fontWeight: 700,
-                                color: '#575151',
-                                letterSpacing: '0.5px'
+                        <Link
+                            href="mailto:dwarkeshgroupbuild@gmail.com" underline="none">
+                            <Box sx={{
+                                display: 'flex',
+                                alignItems: 'flex-start',
+                                justifyContent: {xs: 'center', md: 'left'},
+                                mb: 1
                             }}>
-                                dwarkeshgroupbuild@gmail.com
-                            </Typography>
-                        </Box>
+                                <Email sx={{mr: 1, color: '#CA7306'}}/>
+                                <Typography sx={{
+                                    fontSize: {xs: '14px', sm: '16px', md: '18px'},
+                                    fontWeight: 700,
+                                    color: '#575151',
+                                    letterSpacing: '0.5px'
+                                }}>
+                                    dwarkeshgroupbuild@gmail.com
+                                </Typography>
+                            </Box>
+                        </Link>
 
                         <Box sx={{mt: 2}}>
                             <IconButton size="large"><Facebook sx={{color: '#CA7306'}}/></IconButton>
@@ -84,7 +96,7 @@ const Footer = () => {
                                 to={`/residential`}
                                 style={{textDecoration: 'none', color: '#CA7306', fontWeight: 700}}
                             >
-                                RESIDENTIAL
+                                {t('residential')}
                             </RouterLink>
                         </Typography>
                         {residentialProjects.map((project) => (
@@ -111,7 +123,7 @@ const Footer = () => {
                                 to={`/commercial`}
                                 style={{textDecoration: 'none', color: '#CA7306', fontWeight: 700}}
                             >
-                                COMMERCIAL
+                                {t('commercial')}
                             </RouterLink>
                         </Typography>
                         {commercialProjects.map((project) => (
@@ -134,18 +146,18 @@ const Footer = () => {
                             color: '#CA7306',
                             mb: 2,
                         }}>
-                            REACH US
+                            {t('reach_us')}
                         </Typography>
                         <Typography sx={itemStyle}>
                             <RouterLink
                                 to={`/contact`}
                                 style={{textDecoration: 'none', color: '#575151', fontWeight: 700}}
                             >
-                                CONTACT US
+                                {t('contact_us')}
                             </RouterLink>
                         </Typography>
-                        <Typography sx={itemStyle}>CAREERS</Typography>
-                        <Typography sx={itemStyle}>BLOGS</Typography>
+                        <Typography sx={itemStyle}>{t('careers')}</Typography>
+                        <Typography sx={itemStyle}>{t('blogs')}</Typography>
                     </Grid>
                 </Grid>
 
@@ -162,10 +174,10 @@ const Footer = () => {
                             lineHeight: 1.5
                         }}
                     >
-                        © 2025 Dwarkesh Group. All Rights Reserved –
-                        <Link href="#" underline="hover" sx={{color: '#575151', mx: 1}}>Disclaimer</Link>•
-                        <Link href="#" underline="hover" sx={{color: '#575151', mx: 1}}>Privacy Policy</Link>•
-                        <Link href="#" underline="hover" sx={{color: '#575151', mx: 1}}>Cookie Policy</Link>
+                        © 2025 {t('company_name')}. {t('all_rights_reserved')} –
+                        <Link href="#" underline="hover" sx={{color: '#575151', mx: 1}}>{t('disclaimer')}</Link>•
+                        <Link href="#" underline="hover" sx={{color: '#575151', mx: 1}}>{t('privacy_policy')}</Link>•
+                        <Link href="#" underline="hover" sx={{color: '#575151', mx: 1}}>{t('cookie_policy')}</Link>
                     </Typography>
                 </Box>
             </Container>

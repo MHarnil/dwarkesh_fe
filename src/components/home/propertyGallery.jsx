@@ -35,11 +35,10 @@ const PropertyGallery = () => {
 
     const filteredProperties =
         activeFilter === 'ALL'
-            ? propertyFloorPlans
-            : propertyFloorPlans.filter(property =>
+            ? propertyFloorPlans(t)
+            : propertyFloorPlans(t).filter(property =>
                 property.categories.includes(activeFilter)
             );
-
 
     return (
         <Box sx={{py: 10, backgroundColor: '#FAFBFF'}}>

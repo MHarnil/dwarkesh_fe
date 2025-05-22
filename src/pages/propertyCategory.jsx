@@ -8,36 +8,34 @@ import bgimg from '../assets/images/about/IMG-20250508-WA0051 3.png';
 import {useTranslation} from "react-i18next";
 
 const PropertyCategory = () => {
-    const { t } = useTranslation();
+    const {t} = useTranslation();
     const location = useLocation();
     const navigate = useNavigate();
     const isCommercial = location.pathname === '/commercial';
     const [openDialog, setOpenDialog] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
 
-    // Filter properties based on type
-    const properties = propertyFloorPlans.filter(
-        (property) => property.propertyType === (isCommercial ? 'Commercial' : 'Residential')
+    // Filter properties based on propertyCategory key
+    const properties = propertyFloorPlans(t).filter(
+        (property) => property.propertyCategory === (isCommercial ? 'commercial' : 'residential')
     );
 
     return (
-        <Box sx={{ backgroundColor: '#FAFBFF'}}>
-            <Box
-                sx={{
-                    height: '100vh',
-                    width: '100%',
-                    backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${bgimg})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    color: '#fff',
-                    textAlign: 'center',
-                }}
-            >
+        <Box sx={{backgroundColor: '#FAFBFF'}}>
+            <Box sx={{
+                height: '100vh',
+                width: '100%',
+                backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${bgimg})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                color: '#fff',
+                textAlign: 'center',
+            }}>
                 <Typography variant="h2" component="h1" fontWeight="bold">
                     {isCommercial ? t('Properties.commercialProperties') : t('Properties.residentialProperties')}
                 </Typography>
@@ -45,7 +43,8 @@ const PropertyCategory = () => {
                     {t('Properties.location')}
                 </Typography>
             </Box>
-            <Container maxWidth="xl" sx={{py:12}}>
+
+            <Container maxWidth="xl" sx={{py: 12}}>
                 <Grid container spacing={2}>
                     {properties?.map((property) => (
                         <Grid item size={{xs: 6, sm: 4, md: 3, lg: 3}} key={property.id}>

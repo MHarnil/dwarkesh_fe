@@ -20,6 +20,7 @@ const App = () => {
     }
 
     return (
+        <>
         <Router>
             <ScrollToTop/>
             <Header/>
@@ -33,6 +34,7 @@ const App = () => {
             </Routes>
             <Footer/>
         </Router>
+        </>
     );
 };
 
