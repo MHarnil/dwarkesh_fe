@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
     Grid,
     Typography,
@@ -7,12 +7,12 @@ import {
     Modal,
 } from '@mui/material';
 import propertyFloorPlans from '../propertyFloorPlans.js';
-import { useParams } from "react-router-dom";
+import {useParams} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 
 const FloorPlansSection = () => {
-    const { id } = useParams();
-    const { t } = useTranslation();
+    const {id} = useParams();
+    const {t} = useTranslation();
     const floorData = propertyFloorPlans(t).find(plan => plan.id === Number(id));
 
     const [open, setOpen] = useState(false);
@@ -30,21 +30,21 @@ const FloorPlansSection = () => {
 
     if (!floorData) {
         return (
-            <Container sx={{ mt: 10 }}>
+            <Container sx={{mt: 10}}>
                 <Typography variant="h5" align="center">No Floor Plans Found</Typography>
             </Container>
         );
     }
 
     return (
-        <Box sx={{ padding: 3, mt: 10 }}>
+        <Box sx={{padding: 3, mt: 10}}>
             <Container>
                 <Typography
                     variant="h4"
                     align="center"
                     gutterBottom
                     sx={{
-                        fontSize: { xs: '30px', sm: '40px', md: '50px' },
+                        fontSize: {xs: '30px', sm: '40px', md: '50px'},
                         fontWeight: '700',
                     }}
                 >
@@ -52,10 +52,18 @@ const FloorPlansSection = () => {
                 </Typography>
 
                 <Grid container spacing={3} justifyContent="center">
+
                     {floorData?.floorPlans?.map((plan, index) => (
-                        <Grid item size={{xs:6,sm:4}} key={index}>
-                            <Box onClick={() => handleOpen(plan.img)} sx={{ cursor: 'pointer' }}>
-                                <Box sx={{ position: 'relative', overflow: 'hidden' }}>
+                        <Grid item size={{xs: 6, sm: 4}} key={index}>
+
+                            {/*onClick={() => handleOpen(plan.img)}*/}
+                            <Box   sx={{
+                                     cursor: 'pointer',
+                                     padding: {xs: '20px', sm: '30px', md: '50px'},
+                                     backgroundColor: '#F4F6F8',
+                                     borderRadius: '10px',
+                                 }}>
+                                <Box sx={{position: 'relative', overflow: 'hidden'}}>
                                     <img
                                         src={plan.img}
                                         alt={plan.title}
@@ -76,9 +84,9 @@ const FloorPlansSection = () => {
                                             background: 'linear-gradient(to bottom, #D841004D, #D841004D)',
                                             opacity: 0,
                                             transition: 'opacity 0.3s ease',
-                                            '&:hover': {
-                                                opacity: 1,
-                                            },
+                                            // '&:hover': {
+                                            //     opacity: 1,
+                                            // },
                                         }}
                                     />
                                 </Box>
@@ -88,11 +96,11 @@ const FloorPlansSection = () => {
                                     align="start"
                                     sx={{
                                         marginTop: 3,
-                                        borderBottom: '2px solid #C4C4C4',
+                                        textAlign: 'center',
                                         pb: 1,
-                                        color: '#CA7306',
-                                        fontSize: { xs: '16px', sm: '18px', md: '20px' },
-                                        fontWeight: '700',
+                                        color: '#222E39',
+                                        fontSize: {xs: '16px', sm: '18px', md: '20px'},
+                                        fontWeight: '600',
                                     }}
                                 >
                                     {plan.title}
@@ -100,6 +108,7 @@ const FloorPlansSection = () => {
                             </Box>
                         </Grid>
                     ))}
+
                 </Grid>
             </Container>
 

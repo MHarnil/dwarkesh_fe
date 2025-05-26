@@ -109,7 +109,7 @@ const propertyFloorPlans = (t) => [
             {title: t('propertyType.floorPlans.1to14'), img: sideOne3}
         ],
         sliderImages: [sliderOne1, sliderOne2, sliderOne3, sliderOne4, sliderOne5, sliderOne6, sliderOne7, sliderOne8, sliderOne9],
-        mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d929.860984618169!2d72.88394812151536!3d21.214237580554737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f0006579271%3A0xdc2416181161d605!2sKarunesh%20Business%20Center%20KBC!5e0!3m2!1sen!2sin!4v1747035262178!5m2!1sen!2sin',
+        mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.126118162067!2d72.95001367057837!3d21.247275390557665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0450023273bab%3A0x2ab61fac596247f7!2sKarunesh%20Luxuria!5e0!3m2!1sen!2sch!4v1748249370808!5m2!1sen!2sch',
         phoneNo: '96018 15727',
         address: t('propertyType.karuneshLuxuria.streetAddress'),
     },
@@ -131,7 +131,7 @@ const propertyFloorPlans = (t) => [
             {title: t('propertyType.floorPlans.thirdFourth'), img: sideTwo3}
         ],
         sliderImages: [sliderTwo1, sliderTwo2, sliderTwo3, sliderTwo4, sliderTwo5],
-        mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d929.860984618169!2d72.88394812151536!3d21.214237580554737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f0006579271%3A0xdc2416181161d605!2sKarunesh%20Business%20Center%20KBC!5e0!3m2!1sen!2sin!4v1747035262178!5m2!1sen!2sin',
+        mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7438.876466240403!2d72.87931646249035!3d21.214464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f0006579271%3A0xdc2416181161d605!2sKarunesh%20Business%20Center%20KBC!5e0!3m2!1sen!2sch!4v1748249930958!5m2!1sen!2sch',
         phoneNo: '87695 93034',
         address: t('propertyType.karuneshBusinessCenter1.streetAddress'),
     },
@@ -153,7 +153,7 @@ const propertyFloorPlans = (t) => [
             {title: t('propertyType.floorPlans.second'), img: sideThree3}
         ],
         sliderImages: [sliderThree1, sliderThree2, sliderThree3, sliderThree4, sliderThree5],
-        mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3127.6353384303993!2d72.88490243183226!3d21.215735301215002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f0006579271%3A0xdc2416181161d605!2sKarunesh%20Business%20Center%20KBC!5e0!3m2!1sen!2sin!4v1747125967666!5m2!1sen!2sin',
+        mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7438.876466240403!2d72.87931646249035!3d21.214464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f00462b3e95%3A0x73ee94caea8a9d90!2sKarunesh%20business%20centre%202%20(KBC%202)!5e0!3m2!1sen!2sch!4v1748250062811!5m2!1sen!2sch',
         phoneNo: '96018 15727',
         address: t('propertyType.karuneshBusinessCenter2.streetAddress'),
     },
@@ -175,7 +175,7 @@ const propertyFloorPlans = (t) => [
             {title: t('propertyType.floorPlans.second'), img: sideFour3}
         ],
         sliderImages: [sliderFour1, sliderFour2, sliderFour3, sliderFour4, sliderFour5],
-        mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d929.860984618169!2d72.88394812151536!3d21.214237580554737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f0006579271%3A0xdc2416181161d605!2sKarunesh%20Business%20Center%20KBC!5e0!3m2!1sen!2sin!4v1747035262178!5m2!1sen!2sin',
+        mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7438.876466240403!2d72.87931646249035!3d21.214464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f007f2ed7e9%3A0xd75fd87445be0f25!2sKARUNESH%20BUSINESS%20CENTRE%203!5e0!3m2!1sen!2sch!4v1748250116092!5m2!1sen!2sch',
         phoneNo: '87695 93034',
         address: t('propertyType.karuneshBusinessCenter3.streetAddress'),
     },
@@ -197,7 +197,7 @@ const propertyFloorPlans = (t) => [
             {title: t('propertyType.floorPlans.typical'), img: sideFive3}
         ],
         sliderImages: [sliderFive1, sliderFive2, sliderFive3, sliderFive4, sliderFive5, sliderFive6, sliderFive7, sliderFive8],
-        mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d929.860984618169!2d72.88394812151536!3d21.214237580554737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f0006579271%3A0xdc2416181161d605!2sKarunesh%20Business%20Center%20KBC!5e0!3m2!1sen!2sin!4v1747035262178!5m2!1sen!2sin',
+        mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29748.87776965548!2d72.93214997451744!3d21.24731942880626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be045004f297c1b%3A0xcb7fd076d82eaec1!2sKarunesh%20Tower!5e0!3m2!1sen!2sch!4v1748249550489!5m2!1sen!2sch',
         phoneNo: '87695 93034',
         address: t('propertyType.karuneshTower.streetAddress'),
     },
@@ -240,7 +240,7 @@ const propertyFloorPlans = (t) => [
             {title: t('propertyType.floorPlans.typical'), img: sideSeven3}
         ],
         sliderImages: [sliderSeven1, sliderSeven2, sliderSeven3, sliderSeven4, sliderSeven5],
-        mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d929.860984618169!2d72.88394812151536!3d21.214237580554737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f0006579271%3A0xdc2416181161d605!2sKarunesh%20Business%20Center%20KBC!5e0!3m2!1sen!2sin!4v1747035262178!5m2!1sen!2sin',
+        mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2546.7346736346067!2d72.91619921483303!3d21.245751150403045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be045005243fbbf%3A0xa5b9fe85f477332e!2sKarunesh%20Homes!5e0!3m2!1sen!2sch!4v1748250488932!5m2!1sen!2sch',
         phoneNo: '87695 93034',
         address: t('propertyType.karuneshHomes.streetAddress'),
     }
