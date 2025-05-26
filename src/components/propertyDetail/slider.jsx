@@ -119,6 +119,8 @@ const ProjectGallerySlider = () => {
                             color: '#CA7306',
                             '&:hover': { backgroundColor: '#f0f0f0' },
                             zIndex: 2,
+                            width:{xs:'30px', sm:'44px'},
+                            height:{xs:'30px', sm:'44px'}
                         }}
                     >
                         <ChevronLeftIcon />
@@ -136,6 +138,8 @@ const ProjectGallerySlider = () => {
                             color: '#CA7306',
                             '&:hover': { backgroundColor: '#f0f0f0' },
                             zIndex: 2,
+                            width:{xs:'30px', sm:'44px'},
+                            height:{xs:'30px', sm:'44px'}
                         }}
                     >
                         <ChevronRightIcon />

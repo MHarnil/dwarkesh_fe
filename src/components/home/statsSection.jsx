@@ -6,21 +6,6 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import {useTranslation} from "react-i18next";
 
-const stats = [
-    {
-        value: '94%',
-        description: 'of the world’s population breathes polluted air',
-    },
-    {
-        value: '42',
-        description: 'million trees are cut down every day worldwide',
-    },
-    {
-        value: '2X',
-        description: 'The asthma rate in India is significant, with approximately 34.3 million individuals affected',
-    },
-];
-
 const StatBox = ({value, description}) => (
     <Box
         sx={{
@@ -42,6 +27,7 @@ const StatBox = ({value, description}) => (
                 mt: 1,
                 fontWeight: 300,
                 maxWidth: '470px',
+                textAlign: 'center',
             }}
         >
             {description}

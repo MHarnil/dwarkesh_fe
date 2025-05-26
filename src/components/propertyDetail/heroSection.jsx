@@ -40,7 +40,7 @@ const HeroSection = () => {
     return (
         <Box
             sx={{
-                height: '100vh',
+                height: '80vh',
                 background: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${heroImg}) center/cover no-repeat`,
                 color: 'white',
                 display: 'flex',
@@ -104,7 +104,6 @@ const HeroSection = () => {
                 variant="body2"
                 sx={{
                     color: '#E39A4F',
-                    mb: 4,
                     fontWeight: '400',
                     fontSize: {
                         xs: '18px',

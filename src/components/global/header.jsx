@@ -222,9 +222,9 @@ export default function Header() {
                                             gap: 1,
                                             mb: 4
                                         }}>
-                                            <Typography sx={{color: '#fff', fontSize: '20px'}}>Gujarati</Typography>
+                                            <Typography sx={{color: '#fff', fontSize: '20px'}}>{t('gujarati')}</Typography>
                                             <Switch
-                                                checked={language === 'english'}
+                                                checked={language === 'gujarati'}
                                                 onChange={handleLanguageToggle}
                                                 color="default"
                                                 sx={{
@@ -236,7 +236,7 @@ export default function Header() {
                                                     },
                                                 }}
                                             />
-                                            <Typography sx={{color: '#fff', fontSize: '20px'}}>English</Typography>
+                                            <Typography sx={{color: '#fff', fontSize: '20px'}}>{t('english')}</Typography>
                                         </Box>
                                     </Drawer>
                                 </>

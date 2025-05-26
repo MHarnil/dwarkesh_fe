@@ -151,12 +151,29 @@ const Footer = () => {
                         <Typography sx={itemStyle}>
                             <RouterLink
                                 to={`/contact`}
-                                style={{textDecoration: 'none', color: '#575151', fontWeight: 700}}
+                                style={{
+                                    textDecoration: 'none',
+                                    color: '#575151',
+                                    fontWeight: 700,
+                                    textTransform: 'uppercase'
+                                }}
                             >
                                 {t('contact_us')}
                             </RouterLink>
                         </Typography>
-                        <Typography sx={itemStyle}>{t('careers')}</Typography>
+                        <Typography sx={itemStyle}>
+                            <RouterLink
+                                to={`/about`}
+                                style={{
+                                    textDecoration: 'none',
+                                    color: '#575151',
+                                    fontWeight: 700,
+                                    textTransform: 'uppercase'
+                                }}
+                            >
+                                {t('about_us')}
+                            </RouterLink>
+                        </Typography>
                         <Typography sx={itemStyle}>{t('blogs')}</Typography>
                     </Grid>
                 </Grid>
