@@ -89,125 +89,131 @@ const PropertyGallery = () => {
                     </Stack>
                 </Box>
 
-                <Grid container spacing={2}>
+                <Grid
+                    container
+                    spacing={3}
+                    justifyContent="center"
+                >
                     {filteredProperties?.map((property) => (
-                        <Grid item size={{xs: 6,sm:4, md: 3, lg: 3}} key={property.id}>
-                            <Card onClick={() => navigate(`/property/${property.id}`)}
+                        <Grid
+                            item
+                            key={property.id}
+                            xs={12}
+                            sm={6}
+                            md={4}
+                            lg={3}
+                            sx={{
+                                display: 'flex',
+                                justifyContent: 'center', // center card horizontally
+                            }}
+                        >
+                            <Card
+                                onClick={() => navigate(`/property/${property.id}`)}
                                 sx={{
-                                    borderRadius: '0',
+                                    width: 300,
+                                    height: 500, // increased height
+                                    borderRadius: 3,
                                     cursor: 'pointer',
-                                    height: '100%',
-                                    width: '100%',
                                     display: 'flex',
                                     flexDirection: 'column',
-                                    position: 'relative',
-                                    boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+                                    boxShadow: '0 6px 16px rgba(0,0,0,0.15)',
                                     overflow: 'hidden',
+                                    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                                     '&:hover': {
-                                        boxShadow: '0 6px 12px rgba(0,0,0,0.15)',
+                                        transform: 'translateY(-6px)',
+                                        boxShadow: '0 10px 24px rgba(0,0,0,0.2)',
                                     },
-                                    '&:hover .hover-content': {
-                                        opacity: 1,
-                                        visibility: 'visible',
-                                    }
                                 }}
                             >
-                                <Box sx={{position: 'relative'}}>
-                                    <CardMedia
-                                        component="img"
-                                        height="auto"
-                                        image={property.image}
-                                        alt={property.name}
-                                    />
-
-                                    <Box
-                                        className="hover-content"
-                                        sx={{
-                                            position: 'absolute',
-                                            top: 0,
-                                            left: 0,
-                                            width: '100%',
-                                            height: '100%',
-                                            background: 'linear-gradient(to top, rgba(0,0,0,0.7), transparent)',
-                                            color: 'white',
-                                            p: {xs: 1, sm: 4},
-                                            opacity: 0,
-                                            visibility: 'hidden',
-                                            transition: 'opacity 0.3s ease, visibility 0.3s ease',
-                                            display: 'flex',
-                                            flexDirection: 'column',
-                                            justifyContent: 'space-around',
-                                        }}
+                                <CardMedia
+                                    component="img"
+                                    image={property.image}
+                                    alt={property.name}
+                                    sx={{
+                                        height: 240, // increased image height proportionally
+                                        objectFit: 'cover',
+                                    }}
+                                />
+                                <Box
+                                    sx={{
+                                        flexGrow: 1,
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        justifyContent: 'center',
+                                        alignItems: 'center',
+                                        textAlign: 'center',
+                                        px: 2,
+                                        py: 3,
+                                    }}
+                                >
+                                    <Typography
+                                        variant="h6"
+                                        fontWeight={700}
+                                        fontSize={20}
+                                        sx={{ mb: 1 }}
                                     >
-                                        <Box>
-                                            <Typography variant="h6" sx={{
-                                                fontWeight: '700',
-                                                fontSize: {xs: '14px', sm: '22px'},
-                                                color: '#fff'
-                                            }}>
-                                                {property.name}
-                                            </Typography>
-                                            <Box sx={{mt: 0.5, display: 'flex', alignItems: 'center'}}>
-                                                <Typography sx={{
-                                                    fontWeight: '400',
-                                                    fontSize: {xs: '12px', sm: '13px'},
-                                                    color: '#fff'
-                                                }}>{property.location}</Typography>
-                                            </Box>
-                                        </Box>
+                                        {property.name}
+                                    </Typography>
+                                    <Typography
+                                        variant="body2"
+                                        color="text.secondary"
+                                        fontSize={15}
+                                        sx={{ mb: 3 }}
+                                    >
+                                        {property.location}
+                                    </Typography>
 
-                                        <Box sx={{display: 'flex', justifyContent: 'start', gap: 1, my: 2}}>
-                                            <IconButton
-                                                onClick={(e) => {
-                                                    e.stopPropagation(); // prevents click from bubbling to Card
-                                                    setSelectedImage(property.image);
-                                                    setOpenDialog(true);
-                                                }}
-                                                sx={{
-                                                    backgroundColor: '#fff',
-                                                    '&:hover': { backgroundColor: '#EFBA1D' },
-                                                    width: { xs: 18, sm: 45 },
-                                                    height: { xs: 18, sm: 45 },
-                                                    borderRadius: '5px',
-                                                    color: '#000',
-                                                    p: { xs: 2, sm: 0 }
-                                                }}
-                                            >
-                                                <ZoomOutMap />
-                                            </IconButton>
-                                            <IconButton
-                                                sx={{
-                                                    backgroundColor: '#fff',
-                                                    '&:hover': {backgroundColor: '#EFBA1D'},
-                                                    width: {xs: 18, sm: 45},
-                                                    height: {xs: 18, sm: 45},
-                                                    borderRadius: '5px',
-                                                    color: '#000',
-                                                    p: {xs: 2, sm: 0}
-                                                }}
-                                            >
-                                                <Search/>
-                                            </IconButton>
-                                            <IconButton onClick={() => navigate(`/property/${property.id}`)}
-                                                        sx={{
-                                                            backgroundColor: '#fff',
-                                                            '&:hover': {backgroundColor: '#EFBA1D'},
-                                                            width: {xs: 18, sm: 45},
-                                                            height: {xs: 18, sm: 45},
-                                                            borderRadius: '5px',
-                                                            color: '#000',
-                                                            p: {xs: 2, sm: 0}
-                                                        }}
-                                            >
-                                                <ArrowForward/>
-                                            </IconButton>
-                                        </Box>
+                                    <Box sx={{ display: 'flex', gap: 1 }}>
+                                        <IconButton
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                setSelectedImage(property.image);
+                                                setOpenDialog(true);
+                                            }}
+                                            sx={{
+                                                backgroundColor: '#f5f5f5',
+                                                '&:hover': { backgroundColor: '#EFBA1D' },
+                                                width: 40,
+                                                height: 40,
+                                                borderRadius: 1,
+                                                color: '#000',
+                                            }}
+                                        >
+                                            <ZoomOutMap fontSize="small" />
+                                        </IconButton>
+                                        <IconButton
+                                            sx={{
+                                                backgroundColor: '#f5f5f5',
+                                                '&:hover': { backgroundColor: '#EFBA1D' },
+                                                width: 40,
+                                                height: 40,
+                                                borderRadius: 1,
+                                                color: '#000',
+                                            }}
+                                        >
+                                            <Search fontSize="small" />
+                                        </IconButton>
+                                        <IconButton
+                                            onClick={() => navigate(`/property/${property.id}`)}
+                                            sx={{
+                                                backgroundColor: '#f5f5f5',
+                                                '&:hover': { backgroundColor: '#EFBA1D' },
+                                                width: 40,
+                                                height: 40,
+                                                borderRadius: 1,
+                                                color: '#000',
+                                            }}
+                                        >
+                                            <ArrowForward fontSize="small" />
+                                        </IconButton>
                                     </Box>
                                 </Box>
                             </Card>
                         </Grid>
                     ))}
                 </Grid>
+
+
             </Container>
             <Modal
                 open={openDialog}
