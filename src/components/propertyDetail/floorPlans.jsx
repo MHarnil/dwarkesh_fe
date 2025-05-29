@@ -82,11 +82,7 @@ const FloorPlansSection = () => {
                                             width: '100%',
                                             height: '100%',
                                             background: 'linear-gradient(to bottom, #D841004D, #D841004D)',
-                                            opacity: 0,
-                                            transition: 'opacity 0.3s ease',
-                                            // '&:hover': {
-                                            //     opacity: 1,
-                                            // },
+                                            opacity: 0
                                         }}
                                     />
                                 </Box>
@@ -97,7 +93,6 @@ const FloorPlansSection = () => {
                                     sx={{
                                         marginTop: 3,
                                         textAlign: 'center',
-                                        pb: 1,
                                         color: '#222E39',
                                         fontSize: {xs: '16px', sm: '18px', md: '20px'},
                                         fontWeight: '600',

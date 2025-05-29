@@ -66,13 +66,14 @@ export default function Header() {
                     WebkitBackdropFilter: scrolled ? 'blur(10px)' : 'none',
                     transition: 'background-color 0.3s ease, backdrop-filter 0.3s ease',
                     boxShadow: scrolled ? '0 4px 20px rgba(0, 0, 0, 0.2)' : 'none',
+                    borderRadius:'0 0 40px 40px'
                 }}
             >
                 <Container maxWidth="xl">
                     <Toolbar
                         sx={{
                             justifyContent: 'space-between',
-                            padding: {xs: '0.5rem 1rem', md: '1rem 2rem'}
+                            padding: {xs: '0rem 1rem', md: '0.5rem 2rem'},
                         }}
                     >
                         <Box onClick={() => navigate('/')} sx={{width: '100px', height: '100px', cursor: 'pointer'}}>

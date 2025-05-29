@@ -101,7 +101,7 @@ const propertyFloorPlans = (t) => [
         stateLocation: t('contact.hero.location'),
         name: t('propertyType.karuneshLuxuria.title'),
         location: t('propertyType.karuneshLuxuria.location'),
-        categories: ['ALL', '2 BHK', '3 BHK'],
+        categories: ['ALL', '2 BHK'],
         image: karuneshLuxuria,
         floorPlans: [
             {title: t('propertyType.floorPlans.ground'), img: sideOne1},
@@ -189,7 +189,7 @@ const propertyFloorPlans = (t) => [
         stateLocation: t('contact.hero.location'),
         name: t('propertyType.karuneshTower.title'),
         location: t('propertyType.karuneshTower.location'),
-        categories: ['ALL', '2 BHK', '3 BHK'],
+        categories: ['ALL', '2 BHK'],
         image: twinTowersImage,
         floorPlans: [
             {title: t('propertyType.floorPlans.ground'), img: sideFive1},
@@ -210,7 +210,7 @@ const propertyFloorPlans = (t) => [
         stateLocation: t('contact.hero.location'),
         name: t('propertyType.residentialPlot.name'),
         location: t('propertyType.residentialPlot.location'),
-        categories: ['ALL', '3 BHK'],
+        categories: ['ALL'],
         image: iconVilla,
         floorPlans: [
             {title: t('propertyType.floorPlans.iconVilla'), img: sideSix1},
@@ -232,7 +232,7 @@ const propertyFloorPlans = (t) => [
         stateLocation: t('contact.hero.location'),
         name: t('propertyType.karuneshHomes.title'),
         location: t('propertyType.karuneshHomes.location'),
-        categories: ['ALL', '2 BHK', '3 BHK'],
+        categories: ['ALL', '2 BHK'],
         image: homes,
         floorPlans: [
             {title: t('propertyType.floorPlans.ground'), img: sideSeven1},

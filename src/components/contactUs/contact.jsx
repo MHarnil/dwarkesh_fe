@@ -157,16 +157,9 @@ const Contact = () => {
                             title="Karunesh Business Center"
                         ></iframe>
                     </Box>
-                    <Box display="flex" alignItems="center" pb={2} my={2} sx={{borderBottom: '2px solid #CA730680'}}>
+                    <Box display="flex" alignItems="center" pb={2} my={5} sx={{borderBottom: '2px solid #CA730680'}}>
                         <PhoneIcon sx={{color: '#CA7306', mr: 1, fontSize: '28px'}}/>
                         <Typography>{t('contact.contact.info.phone')}</Typography>
-                    </Box>
-
-                    <Box display="flex" alignItems="center" pb={2} my={2} sx={{borderBottom: '2px solid #CA730680'}}>
-                        <RoomIcon sx={{color: '#CA7306', mr: 1, fontSize: '28px'}}/>
-                        <Typography>
-                            {t('contact.contact.info.address')}
-                        </Typography>
                     </Box>
                 </Grid>
             </Grid>
