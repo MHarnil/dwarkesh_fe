@@ -14,7 +14,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 import { useParams } from 'react-router-dom';
-import propertyFloorPlans from '../propertyFloorPlans';
+import propertyFloorPlans from '../../data/propertyFloorPlans.js';
 
 import 'swiper/css';
 import 'swiper/css/navigation';

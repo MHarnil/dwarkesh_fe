@@ -7,12 +7,10 @@ import {
     Button,
     Card,
     CardMedia,
-    IconButton,
-    Stack, Modal
+    Stack
 } from '@mui/material';
-import {ZoomOutMap, Search, ArrowForward} from '@mui/icons-material';
 import {useNavigate} from "react-router-dom";
-import propertyFloorPlans from "../propertyFloorPlans.js";
+import propertyFloorPlans from "../../data/propertyFloorPlans.js";
 import {useTranslation} from "react-i18next";
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
@@ -69,10 +67,10 @@ const PropertyGallery = () => {
                                     minWidth: 'auto',
                                     border: 'none',
                                     boxShadow: 'none',
-                                    px: { xs: 1.5, sm: 2 },
-                                    py: { xs: 0.5, sm: 0.75 },
+                                    px: {xs: 1.5, sm: 2},
+                                    py: {xs: 0.5, sm: 0.75},
                                     borderRadius: '5px',
-                                    fontSize: { xs: '13px', sm: '14px', md: '16px' },
+                                    fontSize: {xs: '13px', sm: '14px', md: '16px'},
                                     fontWeight: 400,
                                     backgroundColor: activeFilter === filter.label ? '#000' : 'transparent',
                                     color: activeFilter === filter.label ? '#fff' : '#747474',
@@ -97,24 +95,24 @@ const PropertyGallery = () => {
                     {filteredProperties?.map((property) => (
                         <Grid
                             item
-                            key={property.id}  size={{xs:12, sm:6, lg:4}}
+                            key={property.id} size={{xs: 12, sm: 6, lg: 4}}
                             sx={{
                                 display: 'flex',
-                                justifyContent: 'center', // center card horizontally
+                                justifyContent: 'center',
                             }}
                         >
                             <Card
                                 onClick={() => navigate(`/property/${property.id}`)}
                                 sx={{
                                     width: '100%',
-                                    height: '100%', // increased height
+                                    height: '100%',
                                     borderRadius: 3,
                                     cursor: 'pointer',
                                     display: 'flex',
                                     flexDirection: 'column',
                                     boxShadow: '0 6px 16px rgba(0,0,0,0.15)',
                                     overflow: 'hidden',
-                                    p:3,
+                                    p: 3,
                                     transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                                     '&:hover': {
                                         transform: 'translateY(-6px)',
@@ -161,27 +159,36 @@ const PropertyGallery = () => {
                                     </Typography>
 
                                     <Box sx={{width: '100%'}}>
-                                        <Typography sx={{fontSize:'26px', fontWeight:700,mb:1}} >Contact for Price</Typography>
+                                        <Typography sx={{fontSize: '26px', fontWeight: 700, mb: 1}}>Contact for
+                                            Price</Typography>
                                         <Grid container spacing={2}>
                                             <Grid size={4}>
-                                                <Box sx={{border:'1px solid #000', borderRadius: 3, p:1}}>
+                                                <Box sx={{border: '1px solid #d7d7d7', borderRadius: 3, p: 1}}>
                                                     <img
                                                         src={'https://sqfthub.com/_next/static/media/Bedroom.2287479b.svg'}/>
-                                                    <Typography sx={{fontSize:{xs:'16px',sm:'14px',md:'16px'}}}>3 BHK</Typography>
+                                                    <Typography sx={{fontSize: {xs: '14px', sm: '14px', md: '16px'}}}>3
+                                                        BHK</Typography>
                                                 </Box>
                                             </Grid>
                                             <Grid size={4}>
-                                                <Box sx={{border:'1px solid #000', borderRadius: 3, p:1}}>
+                                                <Box sx={{border: '1px solid #d7d7d7', borderRadius: 3, p: 1}}>
                                                     <img
                                                         src={'https://sqfthub.com/_next/static/media/Size.94e286aa.svg'}/>
-                                                    <Typography sx={{fontSize:{xs:'16px',sm:'14px',md:'16px'}}}>2155 sqft.</Typography>
+                                                    <Typography sx={{fontSize: {xs: '14px', sm: '14px', md: '16px'}}}>2155
+                                                        sqft.</Typography>
                                                 </Box>
                                             </Grid>
                                             <Grid size={4}>
-                                                <Box sx={{border:'1px solid #000', borderRadius: 3, p:1}}>
+                                                <Box sx={{border: '1px solid #d7d7d7', borderRadius: 3, p: 1}}>
                                                     <img
                                                         src={'https://sqfthub.com/_next/static/media/Possession.b467376a.svg'}/>
-                                                    <Typography sx={{fontSize:{xs:'16px',sm:'14px',md:'16px'}}}>Possession</Typography>
+                                                    <Typography sx={{
+                                                        fontSize: {
+                                                            xs: '14px',
+                                                            sm: '14px',
+                                                            md: '16px'
+                                                        }
+                                                    }}>Possession</Typography>
                                                 </Box>
                                             </Grid>
                                         </Grid>
@@ -189,7 +196,7 @@ const PropertyGallery = () => {
 
                                     <Button
                                         variant="contained"
-                                        startIcon={<WhatsAppIcon />}
+                                        startIcon={<WhatsAppIcon/>}
                                         sx={{
                                             backgroundColor: '#1E2A36',
                                             color: 'white',

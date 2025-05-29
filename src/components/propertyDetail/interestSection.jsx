@@ -11,7 +11,7 @@ import {
 import PhoneIcon from '@mui/icons-material/Phone';
 import RoomIcon from '@mui/icons-material/Room';
 import {useParams} from "react-router-dom";
-import propertyFloorPlans from '../propertyFloorPlans';
+import propertyFloorPlans from '../../data/propertyFloorPlans.js';
 import {useTranslation} from "react-i18next";
 
 const InterestSection = () => {

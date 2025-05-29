@@ -6,7 +6,7 @@ import {
     Container,
     Modal,
 } from '@mui/material';
-import propertyFloorPlans from '../propertyFloorPlans.js';
+import propertyFloorPlans from '../../data/propertyFloorPlans.js';
 import {useParams} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 
