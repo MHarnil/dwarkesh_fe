@@ -56,8 +56,8 @@ const FloorPlansSection = () => {
                     {floorData?.floorPlans?.map((plan, index) => (
                         <Grid item size={{xs: 6, sm: 4}} key={index}>
 
-                            {/*onClick={() => handleOpen(plan.img)}*/}
-                            <Box   sx={{
+
+                            <Box onClick={() => handleOpen(plan.img)}   sx={{
                                      cursor: 'pointer',
                                      padding: {xs: '20px', sm: '30px', md: '50px'},
                                      backgroundColor: '#F4F6F8',
