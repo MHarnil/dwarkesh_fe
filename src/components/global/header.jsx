@@ -29,11 +29,12 @@ export default function Header() {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
 
-    const navItems = ['gallery', 'about_us', 'contact_us', 'commercial', 'residential'];
+    const navItems = ['gallery', 'about_us', 'blog','contact_us', 'commercial', 'residential'];
 
     const navRoutes = {
         gallery: '/gallery',
         about_us: '/about',
+        blog: '/blog',
         contact_us: '/contact',
         commercial: '/commercial',
         residential: '/residential'
