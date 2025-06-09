@@ -12,7 +12,7 @@ import {
     useMediaQuery,
     useTheme,
     Container,
-    Switch,Link
+    Switch, Link
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import {useTranslation} from 'react-i18next';
@@ -29,7 +29,7 @@ export default function Header() {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
 
-    const navItems = ['gallery', 'about_us', 'blog','contact_us', 'commercial', 'residential'];
+    const navItems = ['gallery', 'about_us', 'blog', 'contact_us', 'commercial', 'residential'];
 
     const navRoutes = {
         gallery: '/gallery',
@@ -67,7 +67,7 @@ export default function Header() {
                     WebkitBackdropFilter: scrolled ? 'blur(10px)' : 'none',
                     transition: 'background-color 0.3s ease, backdrop-filter 0.3s ease',
                     boxShadow: scrolled ? '0 4px 20px rgba(0, 0, 0, 0.2)' : 'none',
-                    borderRadius:'0 0 40px 40px'
+                    borderRadius: '0 0 40px 40px'
                 }}
             >
                 <Container maxWidth="xl">
@@ -160,7 +160,7 @@ export default function Header() {
                             </Box>
 
                             <Link href="tel:+919601815727" style={{textDecoration: 'none'}}>
-                                <Box sx={{width: '35px', height: '35px'}}>
+                                <Box sx={{width: {xs: '30px', lg: '35px'}, height: {xs: '30px', lg: '35px'}}}>
                                     <Box component="img" src={phone} sx={{width: '100%', height: '100%'}}/>
                                 </Box>
                             </Link>
@@ -224,7 +224,8 @@ export default function Header() {
                                             gap: 1,
                                             mb: 4
                                         }}>
-                                            <Typography sx={{color: '#fff', fontSize: '20px'}}>{t('gujarati')}</Typography>
+                                            <Typography
+                                                sx={{color: '#fff', fontSize: '20px'}}>{t('gujarati')}</Typography>
                                             <Switch
                                                 checked={language === 'gujarati'}
                                                 onChange={handleLanguageToggle}
@@ -238,7 +239,8 @@ export default function Header() {
                                                     },
                                                 }}
                                             />
-                                            <Typography sx={{color: '#fff', fontSize: '20px'}}>{t('english')}</Typography>
+                                            <Typography
+                                                sx={{color: '#fff', fontSize: '20px'}}>{t('english')}</Typography>
                                         </Box>
                                     </Drawer>
                                 </>

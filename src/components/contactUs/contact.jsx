@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
     Grid,
     Typography,
@@ -9,11 +9,42 @@ import {
     Container
 } from '@mui/material';
 import PhoneIcon from '@mui/icons-material/Phone';
-import RoomIcon from '@mui/icons-material/Room';
 import {useTranslation} from "react-i18next";
+import axiosInstance from "../../axiosInstance.js";
 
 const Contact = () => {
     const { t } = useTranslation();
+    const [formData, setFormData] = useState({
+         project: '',
+         firstName: '',
+         lastName: '',
+         contactNo: '',
+         email: '',
+         message: ''
+     });
+
+     const handleChange = (field) => (e) => {
+         setFormData({ ...formData, [field]: e.target.value });
+     };
+
+     const handleSubmit = async () => {
+         try {
+             const res = await axiosInstance.post('/api/contact', formData);
+             console.log(res.data.data);
+
+             // Clear form after successful submit
+             setFormData({
+                 project: '',
+                 firstName: '',
+                 lastName: '',
+                 contactNo: '',
+                 email: '',
+                 message: ''
+             });
+         } catch (error) {
+             console.error('Submission error:', error);
+         }
+     };
     return (
         <Container maxWidth="lg" sx={{py: 10}}>
             <Grid container spacing={3} alignItems="start" justifyContent="center">
@@ -21,15 +52,17 @@ const Contact = () => {
                       sx={{backgroundColor: '#EBEBEB', p: 5, width: {xs: '100%', md: '48%'}}}>
                     <Typography variant="h5" fontWeight="bold" gutterBottom
                                 sx={{fontSize: {xs: '28px', md: '38px'}, fontWeight: '700'}}>
-                        {t('contact.contact.form.title')}
+                        Show Your Interest
                     </Typography>
                     <Typography sx={{color: '#CA7306', mb: 2, fontSize: '15px', fontWeight: '700'}}>
-                        {t('contact.contact.form.subtitle')}
+                        Provide your details below to submit your interest.
                     </Typography>
 
                     <FormControl fullWidth sx={{mb: 2, backgroundColor: '#FFF', height: '45px'}}>
                         <OutlinedInput
-                            placeholder={t('contact.contact.form.placeholders.project')}
+                            placeholder='Project Interested For – Dwarkesh'
+                            value={formData.project}
+                            onChange={handleChange('project')}
                             sx={{
                                 height: '45px',
                                 border: 'none',
@@ -44,7 +77,9 @@ const Contact = () => {
                     <Box sx={{display: 'flex', gap: 2, flexDirection: {xs: 'column', sm: 'row'}}}>
                         <FormControl fullWidth sx={{mb: 2, backgroundColor: '#FFF', height: '45px'}}>
                             <OutlinedInput
-                                placeholder={t('contact.contact.form.placeholders.firstName')}
+                                placeholder='First Name *'
+                                value={formData.firstName}
+                                onChange={handleChange('firstName')}
                                 sx={{
                                     height: '45px',
                                     border: 'none',
@@ -57,7 +92,9 @@ const Contact = () => {
                         </FormControl>
                         <FormControl fullWidth sx={{mb: 2, backgroundColor: '#FFF', height: '45px'}}>
                             <OutlinedInput
-                                placeholder={t('contact.contact.form.placeholders.lastName')}
+                                placeholder='Last Name *'
+                                value={formData.lastName}
+                                onChange={handleChange('lastName')}
                                 sx={{
                                     height: '45px',
                                     border: 'none',
@@ -73,7 +110,9 @@ const Contact = () => {
                     <Box sx={{display: 'flex', gap: 2, flexDirection: {xs: 'column', sm: 'row'}}}>
                         <FormControl fullWidth sx={{mb: 2, backgroundColor: '#FFF', height: '45px'}}>
                             <OutlinedInput
-                                placeholder={t('contact.contact.form.placeholders.contactNo')}
+                                placeholder='Contact No *'
+                                value={formData.contactNo}
+                                onChange={handleChange('contactNo')}
                                 sx={{
                                     height: '45px',
                                     border: 'none',
@@ -86,7 +125,9 @@ const Contact = () => {
                         </FormControl>
                         <FormControl fullWidth sx={{mb: 2, backgroundColor: '#FFF', height: '45px'}}>
                             <OutlinedInput
-                                placeholder={t('contact.contact.form.placeholders.email')}
+                                placeholder='Email ID *'
+                                value={formData.email}
+                                onChange={handleChange('email')}
                                 sx={{
                                     height: '45px',
                                     border: 'none',
@@ -101,9 +142,11 @@ const Contact = () => {
 
                     <FormControl fullWidth sx={{mb: 2, backgroundColor: '#FFF'}}>
                         <OutlinedInput
-                            placeholder={t('contact.contact.form.placeholders.message')}
+                            placeholder='Your Message *'
                             multiline
                             rows={4}
+                            value={formData.message}
+                            onChange={handleChange('message')}
                             sx={{
                                 border: 'none',
                                 borderRadius: '0px',
@@ -116,6 +159,7 @@ const Contact = () => {
                     </FormControl>
 
                     <Button
+                        onClick={handleSubmit}
                         variant="contained"
                         sx={{
                             mt: 2,
@@ -133,7 +177,7 @@ const Contact = () => {
                             },
                         }}
                     >
-                        {t('contact.contact.form.submit')}
+                        Submit Interest
                     </Button>
                 </Grid>
 

@@ -24,7 +24,7 @@ const PropertyCategory = () => {
     return (
         <Box sx={{backgroundColor: '#FAFBFF'}}>
             <Box sx={{
-                height: '100vh',
+                height: '70vh',
                 width: '100%',
                 backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${bgimg})`,
                 backgroundSize: 'cover',
@@ -37,10 +37,10 @@ const PropertyCategory = () => {
                 color: '#fff',
                 textAlign: 'center',
             }}>
-                <Typography variant="h2" component="h1" fontWeight="bold">
+                <Typography variant="h2" component="h1" fontWeight="bold" sx={{mt:10, fontSize:{xs:'44px', sm:'55px'}}}>
                     {isCommercial ? t('Properties.commercialProperties') : t('Properties.residentialProperties')}
                 </Typography>
-                <Typography variant="h6" mt={22} sx={{fontSize: '30px', fontWeight: '700'}}>
+                <Typography variant="h6" mt={18} sx={{fontSize:{xs:'20px', sm:'30px'}, fontWeight: '700'}}>
                     {t('Properties.location')}
                 </Typography>
             </Box>
@@ -118,38 +118,40 @@ const PropertyCategory = () => {
                                     </Typography>
 
                                     <Box sx={{width: '100%'}}>
-                                        <Typography sx={{fontSize: '26px', fontWeight: 700, mb: 1}}>Contact for
-                                            Price</Typography>
+                                        <Typography sx={{fontSize: '26px', fontWeight: 700, mb: 1}}>Contact for Price</Typography>
                                         <Grid container spacing={2}>
-                                            <Grid size={4}>
-                                                <Box sx={{border: '1px solid #d7d7d7', borderRadius: 3, p: 1}}>
-                                                    <img
-                                                        src={'https://sqfthub.com/_next/static/media/Bedroom.2287479b.svg'}/>
-                                                    <Typography sx={{fontSize: {xs: '14px', sm: '14px', md: '16px'}}}>3
-                                                        BHK</Typography>
-                                                </Box>
-                                            </Grid>
-                                            <Grid size={4}>
+                                            {(property.propertyCategory === 'commercial' || property.propertyCategory === 'residential') && (
+                                                <Grid size={property.propertyCategory === 'commercial' ? 6 : 4}>
+                                                    <Box sx={{border: '1px solid #d7d7d7', borderRadius: 3, p: 1}}>
+                                                        <img
+                                                            src={'https://sqfthub.com/_next/static/media/Bedroom.2287479b.svg'}/>
+                                                        <Typography
+                                                            sx={{fontSize: {xs: '14px', sm: '14px', md: '16px'}}}>{property.propertyCategory === 'commercial' ? 'Showroom' : '3 BHK'}</Typography>
+                                                    </Box>
+                                                </Grid>
+                                            )}
+                                            <Grid size={property.propertyCategory === 'commercial' ? 6 : 4}>
                                                 <Box sx={{border: '1px solid #d7d7d7', borderRadius: 3, p: 1}}>
                                                     <img
                                                         src={'https://sqfthub.com/_next/static/media/Size.94e286aa.svg'}/>
-                                                    <Typography sx={{fontSize: {xs: '14px', sm: '14px', md: '16px'}}}>2155
-                                                        sqft.</Typography>
+                                                    <Typography sx={{fontSize: {xs: '14px', sm: '14px', md: '16px'}}}>{property.propertyCategory === 'commercial' ? '1000 sqft.' : '2155 sqft.'}</Typography>
                                                 </Box>
                                             </Grid>
-                                            <Grid size={4}>
-                                                <Box sx={{border: '1px solid #d7d7d7', borderRadius: 3, p: 1}}>
-                                                    <img
-                                                        src={'https://sqfthub.com/_next/static/media/Possession.b467376a.svg'}/>
-                                                    <Typography sx={{
-                                                        fontSize: {
-                                                            xs: '14px',
-                                                            sm: '14px',
-                                                            md: '16px'
-                                                        }
-                                                    }}>Possession</Typography>
-                                                </Box>
-                                            </Grid>
+                                            {property.propertyCategory === 'residential' && (
+                                                <Grid size={4}>
+                                                    <Box sx={{border: '1px solid #d7d7d7', borderRadius: 3, p: 1}}>
+                                                        <img
+                                                            src={'https://sqfthub.com/_next/static/media/Possession.b467376a.svg'}/>
+                                                        <Typography sx={{
+                                                            fontSize: {
+                                                                xs: '14px',
+                                                                sm: '14px',
+                                                                md: '16px'
+                                                            }
+                                                        }}>Possession</Typography>
+                                                    </Box>
+                                                </Grid>
+                                            )}
                                         </Grid>
                                     </Box>
 
@@ -179,7 +181,6 @@ const PropertyCategory = () => {
                                     >
                                         Contact Us
                                     </Button>
-
                                 </Box>
                             </Card>
                         </Grid>

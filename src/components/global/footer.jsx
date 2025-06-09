@@ -79,7 +79,11 @@ const Footer = () => {
 
                         <Box sx={{mt: 2}}>
                             <IconButton size="large"><Facebook sx={{color: '#CA7306'}}/></IconButton>
-                            <IconButton size="large"><Instagram sx={{color: '#CA7306'}}/></IconButton>
+                            <Link href="https://www.instagram.com/dwarkesh_._group/" target="_blank" rel="noopener" underline="none">
+                                <IconButton size="large">
+                                    <Instagram sx={{ color: '#CA7306' }} />
+                                </IconButton>
+                            </Link>
                             <IconButton size="large"><LinkedIn sx={{color: '#CA7306'}}/></IconButton>
                         </Box>
                     </Grid>
@@ -174,7 +178,19 @@ const Footer = () => {
                                 {t('about_us')}
                             </RouterLink>
                         </Typography>
-                        <Typography sx={itemStyle}>{t('blogs')}</Typography>
+                        <Typography sx={itemStyle}>
+                            <RouterLink
+                                to={`/blog`}
+                                style={{
+                                    textDecoration: 'none',
+                                    color: '#575151',
+                                    fontWeight: 700,
+                                    textTransform: 'uppercase'
+                                }}
+                            >
+                                {t('blogs')}
+                            </RouterLink>
+                        </Typography>
                     </Grid>
                 </Grid>
 

@@ -55,14 +55,12 @@ const FloorPlansSection = () => {
 
                     {floorData?.floorPlans?.map((plan, index) => (
                         <Grid item size={{xs: 6, sm: 4}} key={index}>
-
-
-                            <Box onClick={() => handleOpen(plan.img)}   sx={{
-                                     cursor: 'pointer',
-                                     padding: {xs: '20px', sm: '30px', md: '50px'},
-                                     backgroundColor: '#F4F6F8',
-                                     borderRadius: '10px',
-                                 }}>
+                            <Box onClick={() => handleOpen(plan.img)} sx={{
+                                cursor: 'pointer',
+                                padding: {xs: '14px', sm: '20px', md: '40px'},
+                                backgroundColor: '#F4F6F8',
+                                borderRadius: '10px',
+                            }}>
                                 <Box sx={{position: 'relative', overflow: 'hidden'}}>
                                     <img
                                         src={plan.img}
@@ -91,10 +89,10 @@ const FloorPlansSection = () => {
                                     variant="h6"
                                     align="start"
                                     sx={{
-                                        marginTop: 3,
+                                        marginTop: {xs: 2, sm: 3},
                                         textAlign: 'center',
                                         color: '#222E39',
-                                        fontSize: {xs: '16px', sm: '18px', md: '20px'},
+                                        fontSize: {xs: '14px', sm: '18px', md: '20px'},
                                         fontWeight: '600',
                                     }}
                                 >
@@ -103,7 +101,6 @@ const FloorPlansSection = () => {
                             </Box>
                         </Grid>
                     ))}
-
                 </Grid>
             </Container>
 
@@ -138,7 +135,6 @@ const FloorPlansSection = () => {
                     )}
                 </Box>
             </Modal>
-
         </Box>
     );
 };

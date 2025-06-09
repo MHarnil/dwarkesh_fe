@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material';
 import bgimg from '../../assets/images/about/IMG-20250508-WA0051 3.png';
 import {useTranslation} from "react-i18next";
 
-const AboutHero = () => {
+const BlogHero = () => {
     const { t } = useTranslation();
     return (
         <Box
@@ -23,7 +23,8 @@ const AboutHero = () => {
             }}
         >
             <Typography variant="h2" component="h1" fontWeight="bold" sx={{mt:10, fontSize:{xs:'44px', sm:'55px'}}}>
-                {t('about.hero.title')}
+                {/*{t('blog.hero.title')}*/}
+                BLOGS
             </Typography>
             <Typography variant="h6" mt={18} sx={{fontSize:{xs:'20px', sm:'30px'}, fontWeight: '700'}}>
                 {t('about.hero.location')}
@@ -32,4 +33,4 @@ const AboutHero = () => {
     );
 };
 
-export default AboutHero;
+export default BlogHero;

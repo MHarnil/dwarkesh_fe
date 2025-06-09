@@ -18,7 +18,7 @@ const HeroSection = () => {
     const {id} = useParams();
     const targetRef = useRef(null);
 
-    const { t, i18n } = useTranslation();
+    const { t} = useTranslation();
 
     const property = propertyFloorPlans(t).find(property => property.id === parseInt(id));
 
@@ -40,7 +40,7 @@ const HeroSection = () => {
     return (
         <Box
             sx={{
-                height: '80vh',
+                height: {xs:'70vh',lg:'100vh'},
                 background: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${heroImg}) center/cover no-repeat`,
                 color: 'white',
                 display: 'flex',
@@ -120,7 +120,7 @@ const HeroSection = () => {
                 variant="body2"
                 sx={{
                     fontWeight: '400',
-                    mt: 10,
+                    mt: {xs:4, lg:10},
                     fontSize: {
                         xs: '18px',
                         sm: '22px',

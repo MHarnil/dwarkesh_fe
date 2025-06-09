@@ -9,8 +9,8 @@ i18n.use(initReactI18next).init({
         english: { translation: en },
         gujarati: { translation: gu }
     },
-    lng: 'gujarati',
-    fallbackLng: 'gujarati',
+    lng: 'english',
+    fallbackLng: 'english',
     interpolation: { escapeValue: false }
 });
 

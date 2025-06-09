@@ -8,7 +8,7 @@ const ContactHero = () => {
     return (
         <Box
             sx={{
-                height: '100vh',
+                height: '70vh',
                 width: '100%',
                 backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${bgimg})`,
                 backgroundSize: 'cover',
@@ -22,10 +22,10 @@ const ContactHero = () => {
                 textAlign: 'center',
             }}
         >
-            <Typography variant="h2" component="h1" fontWeight="bold">
+            <Typography variant="h2" component="h1" fontWeight="bold" sx={{mt:10, fontSize:{xs:'44px', sm:'55px'}}}>
                 {t('contact.hero.title')}
             </Typography>
-            <Typography variant="h6" mt={22} sx={{fontSize:'30px', fontWeight: '700'}}>
+            <Typography variant="h6" mt={18} sx={{fontSize:{xs:'20px', sm:'30px'}, fontWeight: '700'}}>
                 {t('contact.hero.location')}
             </Typography>
         </Box>

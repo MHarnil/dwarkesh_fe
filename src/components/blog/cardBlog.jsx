@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import {
     Grid,
@@ -28,10 +26,22 @@ const carddata = [
 
 const CardBlog = () => {
     return (
-        <Box sx={{ flexGrow: 1, padding: 4 }}>
-            <Grid container spacing={4}>
-                {carddata.map((item, index) => (
-                    <Grid item xs={12} sm={6} md={4} key={index} >
+        <Box
+            sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                padding: 4,
+            }}
+        >
+            <Grid
+                container
+                spacing={4}
+                justifyContent="center"
+                sx={{ maxWidth: '1200px' }}
+            >
+                {carddata?.map((item, index) => (
+                    <Grid item size={{xs:12, md:6, lg:4}} key={index}>
                         <Card sx={{ borderRadius: 3, boxShadow: 3 }}>
                             <CardMedia
                                 component="img"

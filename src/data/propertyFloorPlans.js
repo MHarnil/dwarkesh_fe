@@ -93,6 +93,7 @@ import sliderSeven5 from '../assets/images/side7/slider/07 1.png';
 const propertyFloorPlans = (t) => [
     {
         id: 1,
+        image: karuneshLuxuria,
         propertyCategory: 'residential',
         propertyType: t('propertyType.residential'),
         heroImg: heroOne,
@@ -102,7 +103,6 @@ const propertyFloorPlans = (t) => [
         name: t('propertyType.karuneshLuxuria.title'),
         location: t('propertyType.karuneshLuxuria.location'),
         categories: ['ALL', '2 BHK'],
-        image: karuneshLuxuria,
         floorPlans: [
             {title: t('propertyType.floorPlans.ground'), img: sideOne1},
             {title: t('propertyType.floorPlans.typical'), img: sideOne2},
@@ -115,6 +115,7 @@ const propertyFloorPlans = (t) => [
     },
     {
         id: 2,
+        image: towerImage,
         propertyCategory: 'commercial',
         propertyType: t('propertyType.commercial'),
         heroImg: heroTwo,
@@ -124,7 +125,6 @@ const propertyFloorPlans = (t) => [
         name: t('propertyType.karuneshBusinessCenter1.title'),
         location: t('propertyType.karuneshBusinessCenter1.location'),
         categories: ['ALL', 'Office', 'ShowRooms', 'Commercial'],
-        image: towerImage,
         floorPlans: [
             {title: t('propertyType.floorPlans.ground'), img: sideTwo1},
             {title: t('propertyType.floorPlans.firstSecond'), img: sideTwo2},
@@ -137,6 +137,7 @@ const propertyFloorPlans = (t) => [
     },
     {
         id: 3,
+        image: buildingImage,
         propertyCategory: 'commercial',
         propertyType: t('propertyType.commercial'),
         heroImg: heroThree,
@@ -146,7 +147,6 @@ const propertyFloorPlans = (t) => [
         name: t('propertyType.karuneshBusinessCenter2.title'),
         location: t('propertyType.karuneshBusinessCenter2.location'),
         categories: ['ALL', 'Office', 'ShowRooms', 'Commercial'],
-        image: buildingImage,
         floorPlans: [
             {title: t('propertyType.floorPlans.ground'), img: sideThree1},
             {title: t('propertyType.floorPlans.first'), img: sideThree2},
@@ -159,6 +159,7 @@ const propertyFloorPlans = (t) => [
     },
     {
         id: 4,
+        image: kbc3Image,
         propertyCategory: 'commercial',
         propertyType: t('propertyType.commercial'),
         heroImg: heroFour,
@@ -168,7 +169,6 @@ const propertyFloorPlans = (t) => [
         name: t('propertyType.karuneshBusinessCenter3.title'),
         location: t('propertyType.karuneshBusinessCenter3.location'),
         categories: ['ALL', 'Office', 'ShowRooms', 'Commercial'],
-        image: kbc3Image,
         floorPlans: [
             {title: t('propertyType.floorPlans.ground'), img: sideFour1},
             {title: t('propertyType.floorPlans.first'), img: sideFour2},
@@ -181,6 +181,7 @@ const propertyFloorPlans = (t) => [
     },
     {
         id: 5,
+        image: twinTowersImage,
         propertyCategory: 'residential',
         propertyType: t('propertyType.residential'),
         heroImg: heroFive,
@@ -190,7 +191,6 @@ const propertyFloorPlans = (t) => [
         name: t('propertyType.karuneshTower.title'),
         location: t('propertyType.karuneshTower.location'),
         categories: ['ALL', '2 BHK'],
-        image: twinTowersImage,
         floorPlans: [
             {title: t('propertyType.floorPlans.ground'), img: sideFive1},
             {title: t('propertyType.floorPlans.first'), img: sideFive2},
@@ -203,6 +203,7 @@ const propertyFloorPlans = (t) => [
     },
     {
         id: 6,
+        image: iconVilla,
         propertyCategory: 'residential',
         propertyType: t('propertyType.residential'),
         heroImg: heroSix,
@@ -211,7 +212,6 @@ const propertyFloorPlans = (t) => [
         name: t('propertyType.residentialPlot.name'),
         location: t('propertyType.residentialPlot.location'),
         categories: ['ALL'],
-        image: iconVilla,
         floorPlans: [
             {title: t('propertyType.floorPlans.iconVilla'), img: sideSix1},
             {title: t('propertyType.floorPlans.park'), img: sideSix2},
@@ -224,6 +224,7 @@ const propertyFloorPlans = (t) => [
     },
     {
         id: 7,
+        image: homes,
         propertyCategory: 'residential',
         propertyType: t('propertyType.residential'),
         heroImg: heroSeven,
@@ -233,7 +234,6 @@ const propertyFloorPlans = (t) => [
         name: t('propertyType.karuneshHomes.title'),
         location: t('propertyType.karuneshHomes.location'),
         categories: ['ALL', '2 BHK'],
-        image: homes,
         floorPlans: [
             {title: t('propertyType.floorPlans.ground'), img: sideSeven1},
             {title: t('propertyType.floorPlans.first'), img: sideSeven2},
