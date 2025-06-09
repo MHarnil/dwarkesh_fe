@@ -174,12 +174,6 @@ const InterestSection = () => {
                         <Typography>+91 {property.phoneNo}</Typography>
                     </Box>
 
-                    <Box>
-                        <Typography sx={{fontSize:'22px', color:'#', fontWeight: '500'}}>
-                            {property.address}
-                        </Typography>
-                    </Box>
-
                     <Box display="flex" alignItems="center" pb={2} my={2} sx={{borderBottom: '2px solid #CA730680'}}>
                         <RoomIcon sx={{color: '#CA7306', mr: 1, fontSize: '28px'}}/>
                         <Typography>
