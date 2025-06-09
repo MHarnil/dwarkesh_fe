@@ -17,7 +17,8 @@ const Socialmedia = () => {
                         sx={{
                             bgcolor: '#1877f2',
                             '&:hover': { bgcolor: '#155ab6' },
-                            borderRadius: 3,
+                            borderRadius: 0,
+                            boxShadow: 0,
                             px: 3,
                             fontWeight: 'bold',
                             textTransform: 'none',
@@ -35,7 +36,8 @@ const Socialmedia = () => {
                         sx={{
                             bgcolor: '#ff0000',
                             '&:hover': { bgcolor: '#cc0000' },
-                            borderRadius: 3,
+                            borderRadius: 0,
+                            boxShadow: 0,
                             px: 3,
                             fontWeight: 'bold',
                             textTransform: 'none',
@@ -61,7 +63,8 @@ const Socialmedia = () => {
                                 '&:hover': {
                                     background: 'linear-gradient(45deg, #e6683c, #dc2743)',
                                 },
-                                borderRadius: 3,
+                                borderRadius: 0,
+                                boxShadow: 0,
                                 px: 3,
                                 fontWeight: 'bold',
                                 textTransform: 'none',
@@ -81,7 +84,8 @@ const Socialmedia = () => {
                         sx={{
                             bgcolor: '#25D366',
                             '&:hover': { bgcolor: '#1ebe5d' },
-                            borderRadius: 3,
+                            borderRadius: 0,
+                            boxShadow: 0,
                             px: 3,
                             fontWeight: 'bold',
                             textTransform: 'none',

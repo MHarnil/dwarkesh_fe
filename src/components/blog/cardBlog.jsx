@@ -6,6 +6,7 @@ import {
     CardContent,
     Typography,
     Box,
+    useTheme,
 } from '@mui/material';
 
 import image1 from '../../assets/images/blog/IMG-20250508-WA0055 2.png';
@@ -25,32 +26,50 @@ const carddata = [
 ];
 
 const CardBlog = () => {
+    const theme = useTheme();
+
     return (
         <Box
             sx={{
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                padding: 4,
+                px: { xs: 2, sm: 4, md: 10 },
+                py: 8,
             }}
         >
-            <Grid
-                container
-                spacing={4}
-                justifyContent="center"
-                sx={{ maxWidth: '1200px' }}
-            >
+            <Grid container spacing={4} maxWidth="lg" justifyContent="center">
                 {carddata?.map((item, index) => (
                     <Grid item size={{xs:12, md:6, lg:4}} key={index}>
-                        <Card sx={{ borderRadius: 3, boxShadow: 3 }}>
+                        <Card
+                            sx={{
+                                borderRadius: 0,
+                                transition: 'transform 0.3s ease',
+                                '&:hover': {
+                                    transform: 'translateY(-5px)',
+                                },
+                                cursor: 'pointer',
+                            }}
+                        >
                             <CardMedia
                                 component="img"
                                 image={item.img}
-                                alt={`building-${index}`}
-                                sx={{ height: 200, objectFit: 'cover' }}
+                                alt={`card-image-${index}`}
+                                sx={{
+                                    height: 220,
+                                    objectFit: 'cover',
+                                    transition: 'transform 0.4s ease',
+                                    '&:hover': {
+                                        transform: 'scale(1.05)',
+                                    },
+                                }}
                             />
-                            <CardContent sx={{ backgroundColor: '#f0f6fc' }}>
-                                <Typography variant="body2" color="text.secondary">
+                            <CardContent sx={{ backgroundColor: '#ffffff', px: 2, py: 2 }}>
+                                <Typography
+                                    variant="body1"
+                                    color="text.primary"
+                                    sx={{ fontSize: '0.95rem' }}
+                                >
                                     {item.text}
                                 </Typography>
                             </CardContent>
