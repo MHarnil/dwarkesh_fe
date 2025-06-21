@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import bgimg from '../../assets/images/about/IMG-20250508-WA0051 3.png';
+import bgimg from '../../assets/images/about/IMG-20250508-WA0051 3.webp';
 import {useTranslation} from "react-i18next";
 
 const BlogHero = () => {

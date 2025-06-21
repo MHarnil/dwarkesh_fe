@@ -4,7 +4,7 @@ import {useNavigate} from 'react-router-dom';
 import propertyFloorPlans from "../data/propertyFloorPlans.js";
 import {ArrowForward, Search, ZoomOutMap} from "@mui/icons-material";
 import React, {useState} from "react";
-import bgimg from '../assets/images/about/IMG-20250508-WA0051 3.png';
+import bgimg from '../assets/images/about/IMG-20250508-WA0051 3.webp';
 import {useTranslation} from "react-i18next";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
