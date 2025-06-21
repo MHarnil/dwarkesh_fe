@@ -1,6 +1,6 @@
 import React from 'react';
 import {Box} from '@mui/material';
-import journeyImg from '../../assets/images/home/Group 226.png';
+import journeyImg from '../../assets/images/home/Group 226.webp';
 
 const Journey = () => {
     return (

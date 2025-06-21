@@ -6,7 +6,7 @@ import {
     Email, Phone, LocationOn, Facebook, Instagram, LinkedIn, YouTube
 } from '@mui/icons-material';
 import {Link as RouterLink, useNavigate} from 'react-router-dom';
-import logo from '../../assets/images/logo/IMG_9066 3.png';
+import logo from '../../assets/images/logo/IMG_9066 3.webp';
 import propertyFloorPlans from "../../data/propertyFloorPlans.js";
 import {useTranslation} from "react-i18next";
 

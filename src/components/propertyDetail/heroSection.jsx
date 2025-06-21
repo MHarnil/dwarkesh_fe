@@ -1,6 +1,6 @@
 import React, {useRef} from 'react';
 import {Box, Typography, keyframes} from '@mui/material';
-import down from '../../assets/images/icon/ic_twotone-double-arrow.png';
+import down from '../../assets/images/icon/ic_twotone-double-arrow.webp';
 import propertyFloorPlans from "../../data/propertyFloorPlans.js";
 import {useParams} from "react-router-dom";
 import {useTranslation} from "react-i18next";

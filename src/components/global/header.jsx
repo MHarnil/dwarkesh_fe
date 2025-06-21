@@ -16,8 +16,8 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import {useTranslation} from 'react-i18next';
-import logo from '../../assets/images/logo/IMG_9066 3.png';
-import phone from '../../assets/images/icon/proicons_call.png';
+import logo from '../../assets/images/logo/IMG_9066 3.webp';
+import phone from '../../assets/images/icon/proicons_call.webp';
 import {useNavigate} from "react-router-dom";
 
 export default function Header() {

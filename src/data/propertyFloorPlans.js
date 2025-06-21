@@ -1,94 +1,94 @@
 // KARUNESH LUXURIA
-import heroOne from '../assets/images/side1/IMG-20250508-WA0034 1.png';
-import karuneshLuxuria from '../assets/images/side1/IMG-20250508-WA0033 1.png';
-import sideOne1 from '../assets/images/side1/Karunesh Luxuria Brochure-10 1.png';
-import sideOne2 from '../assets/images/side1/Karunesh Luxuria Brochure-11 1.png';
-import sideOne3 from '../assets/images/side1/Karunesh Luxuria Brochure-12 1.png';
-import sliderOne1 from '../assets/images/side1/slider/IMG-20250508-WA0029.jpg';
-import sliderOne2 from '../assets/images/side1/slider/IMG-20250508-WA0030.jpg';
-import sliderOne3 from '../assets/images/side1/slider/IMG-20250508-WA0031.jpg';
-import sliderOne4 from '../assets/images/side1/slider/IMG-20250508-WA0032.jpg';
-import sliderOne5 from '../assets/images/side1/slider/IMG-20250508-WA0033.jpg';
-import sliderOne6 from '../assets/images/side1/slider/IMG-20250508-WA0034.jpg';
-import sliderOne7 from '../assets/images/side1/slider/IMG-20250508-WA0035.jpg';
-import sliderOne8 from '../assets/images/side1/slider/IMG-20250508-WA0036.jpg';
-import sliderOne9 from '../assets/images/side1/slider/IMG-20250508-WA0037.jpg';
+import heroOne from '../assets/images/side1/IMG-20250508-WA0034 1.webp';
+import karuneshLuxuria from '../assets/images/side1/IMG-20250508-WA0033 1.webp';
+import sideOne1 from '../assets/images/side1/Karunesh Luxuria Brochure-10 1.webp';
+import sideOne2 from '../assets/images/side1/Karunesh Luxuria Brochure-11 1.webp';
+import sideOne3 from '../assets/images/side1/Karunesh Luxuria Brochure-12 1.webp';
+import sliderOne1 from '../assets/images/side1/slider/IMG-20250508-WA0029.webp';
+import sliderOne2 from '../assets/images/side1/slider/IMG-20250508-WA0030.webp';
+import sliderOne3 from '../assets/images/side1/slider/IMG-20250508-WA0031.webp';
+import sliderOne4 from '../assets/images/side1/slider/IMG-20250508-WA0032.webp';
+import sliderOne5 from '../assets/images/side1/slider/IMG-20250508-WA0033.webp';
+import sliderOne6 from '../assets/images/side1/slider/IMG-20250508-WA0034.webp';
+import sliderOne7 from '../assets/images/side1/slider/IMG-20250508-WA0035.webp';
+import sliderOne8 from '../assets/images/side1/slider/IMG-20250508-WA0036.webp';
+import sliderOne9 from '../assets/images/side1/slider/IMG-20250508-WA0037.webp';
 
 // KBC 1
-import heroTwo from '../assets/images/side2/IMG-20250508-WA0053 2.png';
-import towerImage from '../assets/images/side2/IMG-20250508-WA0053 4.png';
-import sideTwo1 from '../assets/images/side2/KBC final-05 1.png';
-import sideTwo2 from '../assets/images/side2/KBC final-05 2.png';
-import sideTwo3 from '../assets/images/side2/KBC final-05 3.png';
-import sliderTwo1 from '../assets/images/side2/slider/1cdcb59ec5bdca93c4b40cb7ff40f6ceee6659fd.jpg';
-import sliderTwo2 from '../assets/images/side2/slider/7d38352cce99ecc243feeb11c70877174ade887e.jpg';
-import sliderTwo3 from '../assets/images/side2/slider/018b4d0d9f8e9b7c03c5d4b1887edfb3f6f5e3a8.jpg';
-import sliderTwo4 from '../assets/images/side2/slider/a049ca98867ffa38c5ecdf4a2042938deab81618.jpg';
-import sliderTwo5 from '../assets/images/side2/slider/b2d022a22785fcafecff4ac935c7c4c48f4049e7.jpg';
+import heroTwo from '../assets/images/side2/IMG-20250508-WA0053 2.webp';
+import towerImage from '../assets/images/side2/IMG-20250508-WA0053 4.webp';
+import sideTwo1 from '../assets/images/side2/KBC final-05 1.webp';
+import sideTwo2 from '../assets/images/side2/KBC final-05 2.webp';
+import sideTwo3 from '../assets/images/side2/KBC final-05 3.webp';
+import sliderTwo1 from '../assets/images/side2/slider/1cdcb59ec5bdca93c4b40cb7ff40f6ceee6659fd.webp';
+import sliderTwo2 from '../assets/images/side2/slider/7d38352cce99ecc243feeb11c70877174ade887e.webp';
+import sliderTwo3 from '../assets/images/side2/slider/018b4d0d9f8e9b7c03c5d4b1887edfb3f6f5e3a8.webp';
+import sliderTwo4 from '../assets/images/side2/slider/a049ca98867ffa38c5ecdf4a2042938deab81618.webp';
+import sliderTwo5 from '../assets/images/side2/slider/b2d022a22785fcafecff4ac935c7c4c48f4049e7.webp';
 
 // KBC 2
-import heroThree from '../assets/images/side3/IMG-20250508-WA0066.png';
-import buildingImage from '../assets/images/side3/IMG-20250508-WA0055 1.png';
-import sideThree1 from '../assets/images/side3/KBC-2-05 1.png';
-import sideThree2 from '../assets/images/side3/KBC-2-06 1.png';
-import sideThree3 from '../assets/images/side3/KBC-2-07 1.png';
-import sliderThree1 from '../assets/images/side3/slider/9d2237aeadbcb8933352126d460505afd8ef8e76.jpg';
-import sliderThree2 from '../assets/images/side3/slider/091a9028a9872b31fd5a3a7158c7998206bd17f5.jpg';
-import sliderThree3 from '../assets/images/side3/slider/0535264e48393614877a5a70b20bbd80cc65eb58.jpg';
-import sliderThree4 from '../assets/images/side3/slider/e8c83ffb0e3534bce7168c0056d429503838eb32.jpg';
-import sliderThree5 from '../assets/images/side3/slider/e100017d5c4720006ae7017c807f59547e7562d5.jpg';
+import heroThree from '../assets/images/side3/IMG-20250508-WA0066.webp';
+import buildingImage from '../assets/images/side3/IMG-20250508-WA0055 1.webp';
+import sideThree1 from '../assets/images/side3/KBC-2-05 1.webp';
+import sideThree2 from '../assets/images/side3/KBC-2-06 1.webp';
+import sideThree3 from '../assets/images/side3/KBC-2-07 1.webp';
+import sliderThree1 from '../assets/images/side3/slider/9d2237aeadbcb8933352126d460505afd8ef8e76.webp';
+import sliderThree2 from '../assets/images/side3/slider/091a9028a9872b31fd5a3a7158c7998206bd17f5.webp';
+import sliderThree3 from '../assets/images/side3/slider/0535264e48393614877a5a70b20bbd80cc65eb58.webp';
+import sliderThree4 from '../assets/images/side3/slider/e8c83ffb0e3534bce7168c0056d429503838eb32.webp';
+import sliderThree5 from '../assets/images/side3/slider/e100017d5c4720006ae7017c807f59547e7562d5.webp';
 
 // KBC 3
-import heroFour from '../assets/images/side4/IMG-20250508-WA0063 1.png';
-import kbc3Image from '../assets/images/side4/IMG-20250508-WA0059 1.png';
-import sideFour1 from '../assets/images/side4/KBC-3 Brochure-04 1.png';
-import sideFour2 from '../assets/images/side4/KBC-3 Brochure-05 1.png';
-import sideFour3 from '../assets/images/side4/KBC-3 Brochure-06 1.png';
-import sliderFour1 from '../assets/images/side4/slider/5f14a96723ef1461a8f5b988985fbe0acdda7802.jpg';
-import sliderFour2 from '../assets/images/side4/slider/6f084445affb8cc904f0449644e60dddfdf25f74.jpg';
-import sliderFour3 from '../assets/images/side4/slider/9ba066aa678b525f383e1fe3ce61a72864f64437.jpg';
-import sliderFour4 from '../assets/images/side4/slider/a6a9cf5385910455c88b687b841678e32385ed70.jpg';
-import sliderFour5 from '../assets/images/side4/slider/d879fe51fd5322f44766ccca4bc8d56c91d1ff6a.jpg';
+import heroFour from '../assets/images/side4/IMG-20250508-WA0063 1.webp';
+import kbc3Image from '../assets/images/side4/IMG-20250508-WA0059 1.webp';
+import sideFour1 from '../assets/images/side4/KBC-3 Brochure-04 1.webp';
+import sideFour2 from '../assets/images/side4/KBC-3 Brochure-05 1.webp';
+import sideFour3 from '../assets/images/side4/KBC-3 Brochure-06 1.webp';
+import sliderFour1 from '../assets/images/side4/slider/5f14a96723ef1461a8f5b988985fbe0acdda7802.webp';
+import sliderFour2 from '../assets/images/side4/slider/6f084445affb8cc904f0449644e60dddfdf25f74.webp';
+import sliderFour3 from '../assets/images/side4/slider/9ba066aa678b525f383e1fe3ce61a72864f64437.webp';
+import sliderFour4 from '../assets/images/side4/slider/a6a9cf5385910455c88b687b841678e32385ed70.webp';
+import sliderFour5 from '../assets/images/side4/slider/d879fe51fd5322f44766ccca4bc8d56c91d1ff6a.webp';
 
 // KARUNESH TOWER
-import heroFive from '../assets/images/side5/IMG-20250508-WA0028 1.png';
-import twinTowersImage from '../assets/images/side5/IMG-20250508-WA0041 1.png';
-import sideFive1 from '../assets/images/side5/VAV 635 SP-1 BOOKING PLAN-1 1.png';
-import sideFive2 from '../assets/images/side5/VAV 635 SP-1 BOOKING PLAN-2 1.png';
-import sideFive3 from '../assets/images/side5/VAV 635 SP-1 BOOKING PLAN-3 1.png';
-import sliderFive1 from '../assets/images/side5/slider/IMG-20250508-WA0026.jpg';
-import sliderFive2 from '../assets/images/side5/slider/IMG-20250508-WA0028.jpg';
-import sliderFive3 from '../assets/images/side5/slider/IMG-20250508-WA0039.jpg';
-import sliderFive4 from '../assets/images/side5/slider/IMG-20250508-WA0041.jpg';
-import sliderFive5 from '../assets/images/side5/slider/IMG-20250508-WA0043.jpg';
-import sliderFive6 from '../assets/images/side5/slider/IMG-20250508-WA0045.jpg';
-import sliderFive7 from '../assets/images/side5/slider/IMG-20250508-WA0047.jpg';
-import sliderFive8 from '../assets/images/side5/slider/IMG-20250508-WA0049.jpg';
+import heroFive from '../assets/images/side5/IMG-20250508-WA0028 1.webp';
+import twinTowersImage from '../assets/images/side5/IMG-20250508-WA0041 1.webp';
+import sideFive1 from '../assets/images/side5/VAV 635 SP-1 BOOKING PLAN-1 1.webp';
+import sideFive2 from '../assets/images/side5/VAV 635 SP-1 BOOKING PLAN-2 1.webp';
+import sideFive3 from '../assets/images/side5/VAV 635 SP-1 BOOKING PLAN-3 1.webp';
+import sliderFive1 from '../assets/images/side5/slider/IMG-20250508-WA0026.webp';
+import sliderFive2 from '../assets/images/side5/slider/IMG-20250508-WA0028.webp';
+import sliderFive3 from '../assets/images/side5/slider/IMG-20250508-WA0039.webp';
+import sliderFive4 from '../assets/images/side5/slider/IMG-20250508-WA0041.webp';
+import sliderFive5 from '../assets/images/side5/slider/IMG-20250508-WA0043.webp';
+import sliderFive6 from '../assets/images/side5/slider/IMG-20250508-WA0045.webp';
+import sliderFive7 from '../assets/images/side5/slider/IMG-20250508-WA0047.webp';
+import sliderFive8 from '../assets/images/side5/slider/IMG-20250508-WA0049.webp';
 
 // PLOT
-import heroSix from '../assets/images/side6/Icon-vella.png';
-import iconVilla from '../assets/images/side6/ICON VILLA (1)-3 4.png';
-import sideSix1 from '../assets/images/side6/Icon Villa_Layout Plan 1.png';
-import sideSix2 from '../assets/images/side6/Karunesh Park Fumsheet 2.png';
-import sideSix3 from '../assets/images/side6/TP 40 FP 115 NAVAGAM booking layout 1.png';
-import sliderSix1 from '../assets/images/side6/slider/ICON VILLA (1)-3 1.png';
-import sliderSix2 from '../assets/images/side6/slider/ICON VILLA (1)-3 1.png';
-import sliderSix3 from '../assets/images/side6/slider/ICON VILLA (1)-3 1.png';
-import sliderSix4 from '../assets/images/side6/slider/ICON VILLA (1)-3 1.png';
-import sliderSix5 from '../assets/images/side6/slider/ICON VILLA (1)-3 1.png';
-import sliderSix6 from '../assets/images/side6/slider/ICON VILLA (1)-3 1.png';
+import heroSix from '../assets/images/side6/Icon-vella.webp';
+import iconVilla from '../assets/images/side6/ICON VILLA (1)-3 4.webp';
+import sideSix1 from '../assets/images/side6/Icon Villa_Layout Plan 1.webp';
+import sideSix2 from '../assets/images/side6/Karunesh Park Fumsheet 2.webp';
+import sideSix3 from '../assets/images/side6/TP 40 FP 115 NAVAGAM booking layout 1.webp';
+import sliderSix1 from '../assets/images/side6/slider/ICON VILLA (1)-3 1.webp';
+import sliderSix2 from '../assets/images/side6/slider/ICON VILLA (1)-3 1.webp';
+import sliderSix3 from '../assets/images/side6/slider/ICON VILLA (1)-3 1.webp';
+import sliderSix4 from '../assets/images/side6/slider/ICON VILLA (1)-3 1.webp';
+import sliderSix5 from '../assets/images/side6/slider/ICON VILLA (1)-3 1.webp';
+import sliderSix6 from '../assets/images/side6/slider/ICON VILLA (1)-3 1.webp';
 
 // KARUNESH HOMES
-import heroSeven from '../assets/images/side7/06 1.png';
-import homes from '../assets/images/side7/01 1.png';
-import sideSeven1 from '../assets/images/side7/VAV 635 SP-1 BOOKING PLAN-1 1.png';
-import sideSeven2 from '../assets/images/side7/VAV 635 SP-1 BOOKING PLAN-2 1.png';
-import sideSeven3 from '../assets/images/side7/VAV 635 SP-1 BOOKING PLAN-3 1.png';
-import sliderSeven1 from '../assets/images/side7/slider/02 2.png';
-import sliderSeven2 from '../assets/images/side7/slider/04 1.png';
-import sliderSeven3 from '../assets/images/side7/slider/06 2.png';
-import sliderSeven4 from '../assets/images/side7/slider/08 1.png';
-import sliderSeven5 from '../assets/images/side7/slider/07 1.png';
+import heroSeven from '../assets/images/side7/06 1.webp';
+import homes from '../assets/images/side7/01 1.webp';
+import sideSeven1 from '../assets/images/side7/VAV 635 SP-1 BOOKING PLAN-1 1.webp';
+import sideSeven2 from '../assets/images/side7/VAV 635 SP-1 BOOKING PLAN-2 1.webp';
+import sideSeven3 from '../assets/images/side7/VAV 635 SP-1 BOOKING PLAN-3 1.webp';
+import sliderSeven1 from '../assets/images/side7/slider/02 2.webp';
+import sliderSeven2 from '../assets/images/side7/slider/04 1.webp';
+import sliderSeven3 from '../assets/images/side7/slider/06 2.webp';
+import sliderSeven4 from '../assets/images/side7/slider/08 1.webp';
+import sliderSeven5 from '../assets/images/side7/slider/07 1.webp';
 
 const propertyFloorPlans = (t) => [
     {

@@ -1,9 +1,9 @@
 import React from 'react';
 import {Box, Grid, Typography, Card} from '@mui/material';
-import tntelligent from '../../assets/images/home/14 1.png';
-import quality from '../../assets/images/home/15 1.png';
-import professional from '../../assets/images/home/16 1.png';
-import lifetime from '../../assets/images/home/17 1.png';
+import tntelligent from '../../assets/images/home/14 1.webp';
+import quality from '../../assets/images/home/15 1.webp';
+import professional from '../../assets/images/home/16 1.webp';
+import lifetime from '../../assets/images/home/17 1.webp';
 import {useTranslation} from "react-i18next";
 
 

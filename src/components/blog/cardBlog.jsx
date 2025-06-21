@@ -9,12 +9,12 @@ import {
     useTheme,
 } from '@mui/material';
 
-import image1 from '../../assets/images/blog/IMG-20250508-WA0055 2.png';
-import image2 from '../../assets/images/blog/IMG-20250508-WA0059 4.png';
-import image3 from '../../assets/images/blog/IMG-20250508-WA0076 3.png';
-import image4 from '../../assets/images/blog/ICON VILLA (1)-2 3.png';
-import image5 from '../../assets/images/blog/15bf1774a35a78cd156ee4afe94a57795df74db5.jpg';
-import image6 from '../../assets/images/blog/Group 253.png';
+import image1 from '../../assets/images/blog/IMG-20250508-WA0055 2.webp';
+import image2 from '../../assets/images/blog/IMG-20250508-WA0059 4.webp';
+import image3 from '../../assets/images/blog/IMG-20250508-WA0076 3.webp';
+import image4 from '../../assets/images/blog/ICON VILLA (1)-2 3.webp';
+import image5 from '../../assets/images/blog/IMG-20250508-WA0031 5.webp';
+import image6 from '../../assets/images/blog/01 2.webp';
 
 const carddata = [
     { img: image1, text: 'is simply dummy text of the printing and typesetting industry.' },

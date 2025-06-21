@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import heroBg from '../../assets/images/home/IMG-20250508-WA0022 1.png';
+import heroBg from '../../assets/images/home/IMG-20250508-WA0022 1.webp';
 import {useTranslation} from "react-i18next";
 
 export default function HeroSection() {

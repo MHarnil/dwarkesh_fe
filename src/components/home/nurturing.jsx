@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography, Button, Container } from '@mui/material';
-import bgImage from '../../assets/images/home/IMG-20250508-WA0074.jpg';
+import bgImage from '../../assets/images/home/IMG-20250508-WA0074.webp';
 import {useTranslation} from "react-i18next";
 
 const Nurturing = () => {
