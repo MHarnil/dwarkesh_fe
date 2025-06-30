@@ -8,6 +8,7 @@ const VisionMissionSection = () => {
     return (
         <Box py={{xs: 6, md: 10}} bgcolor="#fff">
             <Container maxWidth="md">
+                {/*visionMission*/}
                 <Box textAlign="center" mb={{xs: 6, md: 10}}>
                     <Typography
                         variant="h4"
