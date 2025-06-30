@@ -24,6 +24,7 @@ const VisionMissionSection = () => {
                     >
                         {t('about.visionMission.vision.title')}
                     </Typography>
+                    {/*visionMission*/}
                     <Typography variant="body1"
                                 align="center"
                                 sx={{
