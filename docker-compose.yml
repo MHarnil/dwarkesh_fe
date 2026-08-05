@@ -1,0 +1,7 @@
+services:
+  dwarkesh-fe:
+    build: .
+    container_name: dwarkesh-fe
+    ports:
+      - "80:80"
+    restart: unless-stopped
